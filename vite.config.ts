@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'; // Beachte das '@' vor vitejs/plugin-r
 export default defineConfig({
   plugins: [react()],
   // Füge diese Zeile hinzu:
-  base: '/Free-ai/', // WICHTIG: '/Free-ai/' muss exakt dem Namen deines GitHub-Repositorys entsprechen und mit einem Schrägstrich enden!
+  base: '/', // Default to root (overridden by CLI flag for GitHub Pages)
 
   optimizedDeps: {
     exclude: ['lucide-react'],

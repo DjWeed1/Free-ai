@@ -7,6 +7,7 @@ export interface Tool {
   url: string;
   rating: number;
   isPremium: boolean;
+  isNew?: boolean;
   tags: string[];
 }
 
@@ -351,10 +352,664 @@ export const toolsData: Tool[] = [
     rating: 4.8,
     isPremium: false,
     tags: ["Grammatik", "Stil", "Korrektur"]
+  },
+
+  // YouTube / Video Analysis Kategorie
+  {
+    id: 31,
+    name: "Eightify",
+    category: "youtube",
+    description: "KI-gestützte YouTube-Zusammenfassungen direkt im Browser.",
+    features: ["Sofortige Zusammenfassungen", "Chrome Extension", "Mehrsprachig", "Zeitstempel"],
+    url: "https://eightify.app/",
+    rating: 4.8,
+    isPremium: false,
+    tags: ["YouTube", "Zusammenfassung", "Extension"]
+  },
+  {
+    id: 32,
+    name: "SolidPoint",
+    category: "youtube",
+    description: "Kostenloses Tool für schnelle YouTube-Video-Zusammenfassungen.",
+    features: ["Kein Login nötig", "Schnelle Analyse", "Kostenlos", "Text-Export"],
+    url: "https://solidpoint.ai/",
+    rating: 4.5,
+    isPremium: false,
+    tags: ["Kostenlos", "Zusammenfassung", "Web-Tool"]
+  },
+  {
+    id: 33,
+    name: "NoteGPT",
+    category: "youtube",
+    description: "KI-Zusammenfassungen und Transkripte für YouTube-Videos.",
+    features: ["Transkript-Generierung", "Mind Maps", "Chat mit Video", "Notizen"],
+    url: "https://notegpt.io/",
+    rating: 4.6,
+    isPremium: false,
+    tags: ["Lernen", "Transkript", "Notizen"]
+  },
+  {
+    id: 34,
+    name: "Glasp",
+    category: "youtube",
+    description: "Social Web Highlighter mit YouTube-Zusammenfassungsfunktion.",
+    features: ["Highlighting", "Community", "Export zu Notion", "Zusammenfassung"],
+    url: "https://glasp.co/",
+    rating: 4.7,
+    isPremium: false,
+    tags: ["Social", "Highlighting", "Produktivität"]
+  },
+  {
+    id: 35,
+    name: "Harpa AI",
+    category: "youtube",
+    description: "Mächtige Chrome-Erweiterung für Web-Automatisierung und YouTube-Analyse.",
+    features: ["Web Automation", "YouTube Summary", "SEO Analyse", "ChatGPT Integration"],
+    url: "https://harpa.ai/",
+    rating: 4.9,
+    isPremium: false,
+    tags: ["Automation", "Extension", "All-in-One"]
+  },
+
+  // Neue Tools aus der Playlist
+  {
+    id: 36,
+    name: "ElevenLabs",
+    category: "phone",
+    description: "Führende KI für Text-to-Speech und Voice Cloning mit extrem realistischen Stimmen.",
+    features: ["Voice Cloning", "Text-to-Speech", "Mehrsprachig", "Emotionale Intonation"],
+    url: "https://elevenlabs.io/",
+    rating: 4.9,
+    isPremium: false,
+    tags: ["Audio", "Voice Cloning", "TTS"]
+  },
+  {
+    id: 37,
+    name: "Poppy AI",
+    category: "content",
+    description: "Visueller Workspace für Content Creation und Management mit verschiedenen KI-Modellen.",
+    features: ["Visueller Workspace", "Multi-Model AI", "Content Management", "Transkription"],
+    url: "https://getpoppy.ai/",
+    rating: 4.5,
+    isPremium: true,
+    tags: ["Content", "Workspace", "Produktivität"]
+  },
+  {
+    id: 38,
+    name: "Pikzels AI",
+    category: "youtube",
+    description: "KI-Generator für klickstarke YouTube Thumbnails.",
+    features: ["Thumbnail Generierung", "Face Swap", "Titel-Ideen", "Style Training"],
+    url: "https://pikzels.com/",
+    rating: 4.6,
+    isPremium: true,
+    tags: ["YouTube", "Thumbnails", "Design"]
+  },
+  {
+    id: 39,
+    name: "Arcads UGC",
+    category: "video",
+    description: "Erstellung von authentischen UGC-Videos mit KI-Schauspielern.",
+    features: ["KI-Avatare", "UGC-Style", "Skript-Generierung", "Multi-Language"],
+    url: "https://arcads.ai/",
+    rating: 4.7,
+    isPremium: true,
+    tags: ["Video", "UGC", "Marketing"]
+  },
+  {
+    id: 40,
+    name: "Submagic",
+    category: "youtube",
+    description: "KI-Videoeditor für virale Shorts mit automatischen Untertiteln und B-Roll.",
+    features: ["Auto-Captions", "B-Roll", "Magic Clips", "Zoom-Effekte"],
+    url: "https://submagic.co/",
+    rating: 4.8,
+    isPremium: true,
+    tags: ["Shorts", "Captions", "Viral"]
+  },
+  {
+    id: 41,
+    name: "Gling AI",
+    category: "youtube",
+    description: "KI-Schnittprogramm für YouTuber, das 'Ähs' und Stille automatisch entfernt.",
+    features: ["Silence Removal", "Bad Take Removal", "Auto-Zoom", "Text-Based Editing"],
+    url: "https://gling.ai/",
+    rating: 4.7,
+    isPremium: false,
+    tags: ["Editing", "YouTube", "Produktivität"]
+  },
+  {
+    id: 42,
+    name: "HeyGen",
+    category: "video",
+    description: "Erstelle professionelle KI-Videos mit realistischen Avataren und Stimmen.",
+    features: ["KI-Avatare", "Voice Cloning", "Video Translate", "Templates"],
+    url: "https://heygen.com/",
+    rating: 4.8,
+    isPremium: true,
+    tags: ["Avatare", "Video Gen", "Business"]
+  },
+  {
+    id: 43,
+    name: "Veed.io",
+    category: "video",
+    description: "Online-Videoeditor mit starken KI-Funktionen für Social Media Content.",
+    features: ["Auto-Subtitles", "Eye Contact Fix", "Magic Cut", "Templates"],
+    url: "https://veed.io/",
+    rating: 4.6,
+    isPremium: false,
+    tags: ["Online-Editor", "Social Media", "All-in-One"]
+  },
+  {
+    id: 44,
+    name: "Kling AI",
+    category: "video",
+    description: "Neuer KI-Videogenerator mit beeindruckender Bewegungsqualität und Realismus.",
+    features: ["Text-to-Video", "Image-to-Video", "High Motion", "Realism"],
+    url: "https://kling.ai/",
+    rating: 4.7,
+    isPremium: false,
+    tags: ["Video Gen", "Realism", "New"]
+  },
+  {
+    id: 45,
+    name: "Fliki AI",
+    category: "video",
+    description: "Verwandelt Text in Videos mit KI-Stimmen und Stock-Media.",
+    features: ["Text-to-Video", "Blog-to-Video", "Voiceovers", "Stock Library"],
+    url: "https://fliki.ai/",
+    rating: 4.5,
+    isPremium: false,
+    tags: ["Text-to-Video", "Social Media", "Content"]
+  },
+  {
+    id: 46,
+    name: "Pictory AI",
+    category: "video",
+    description: "Erstellt automatisch kurze Videos aus langen Inhalten wie Blogs oder Zoom-Calls.",
+    features: ["Blog-to-Video", "Script-to-Video", "Auto-Highlight", "Captions"],
+    url: "https://pictory.ai/",
+    rating: 4.6,
+    isPremium: true,
+    tags: ["Repurposing", "Social Media", "Shorts"]
+  },
+  {
+    id: 47,
+    name: "CapCut",
+    category: "video",
+    description: "Beliebter Videoeditor mit vielen kostenlosen KI-Funktionen für Social Media.",
+    features: ["Auto-Captions", "Background Removal", "Templates", "Effects"],
+    url: "https://www.capcut.com/",
+    rating: 4.9,
+    isPremium: false,
+    tags: ["Mobile", "Desktop", "Free"]
+  },
+  {
+    id: 48,
+    name: "Skip.it.AI",
+    category: "youtube",
+    description: "Zusammenfassungen von YouTube-Videos, PDFs und Websites in Sekunden.",
+    features: ["Summarizer", "Chat with Content", "Time Saver", "Multi-Source"],
+    url: "https://skipit.ai/",
+    rating: 4.4,
+    isPremium: false,
+    tags: ["Produktivität", "Zusammenfassung", "Research"]
+  },
+  {
+    id: 49,
+    name: "Books AI",
+    category: "content",
+    description: "Generiert Buchzusammenfassungen durch einfaches Fotografieren des Covers.",
+    features: ["Book Summary", "Photo Input", "Quick Read", "Learning"],
+    url: "https://booksai.app/",
+    rating: 4.3,
+    isPremium: false,
+    tags: ["Bücher", "Lernen", "Mobile"]
+  },
+  {
+    id: 50,
+    name: "PodShift",
+    category: "content",
+    description: "Erstellt KI-Zusammenfassungen von Podcasts und sendet sie per E-Mail.",
+    features: ["Podcast Summary", "Email Delivery", "Time Saver", "Insights"],
+    url: "https://podshift.com/",
+    rating: 4.2,
+    isPremium: true,
+    tags: ["Podcast", "Zusammenfassung", "Audio"]
+  },
+  {
+    id: 51,
+    name: "AI-Meme",
+    category: "images",
+    description: "Erstellt lustige Memes für Social Media mit KI-Unterstützung.",
+    features: ["Meme Generation", "Templates", "Social Media", "Fun"],
+    url: "https://ai-meme.com/",
+    rating: 4.1,
+    isPremium: false,
+    tags: ["Fun", "Social Media", "Memes"]
+  },
+  {
+    id: 52,
+    name: "NotebookLM",
+    category: "content",
+    description: "Googles KI-Notizbuch für Recherche und Lernen mit Quellenangaben.",
+    features: ["Quellen-basiert", "Zusammenfassungen", "Audio Overviews", "Google Drive Integration"],
+    url: "https://notebooklm.google.com/",
+    rating: 4.8,
+    isPremium: false,
+    tags: ["Lernen", "Recherche", "Google"]
+  },
+  {
+    id: 53,
+    name: "Opus Clip",
+    category: "video",
+    description: "Macht aus langen Videos automatisch virale Kurzvideos (Shorts/TikToks).",
+    features: ["Auto-Clipping", "Virality Score", "Auto-Captions", "Face Detection"],
+    url: "https://www.opus.pro/",
+    rating: 4.7,
+    isPremium: true,
+    tags: ["Shorts", "Repurposing", "Viral"]
+  },
+  {
+    id: 54,
+    name: "SEOWriting AI",
+    category: "content",
+    description: "Erstellt SEO-optimierte Artikel und Blogposts mit einem Klick.",
+    features: ["1-Click Articles", "SEO-Optimierung", "Bulk Generation", "WordPress Integration"],
+    url: "https://seowriting.ai/",
+    rating: 4.5,
+    isPremium: true,
+    tags: ["SEO", "Blogging", "Writing"]
+  },
+  {
+    id: 55,
+    name: "Blaze AI",
+    category: "content",
+    description: "Brand-Voice-fokussierte KI für Marketing-Teams und Solopreneure.",
+    features: ["Brand Voice", "Multi-Channel", "Content Calendar", "Repurposing"],
+    url: "https://www.blaze.ai/",
+    rating: 4.6,
+    isPremium: true,
+    tags: ["Marketing", "Brand", "Team"]
+  },
+  {
+    id: 56,
+    name: "vidIQ",
+    category: "youtube",
+    description: "Umfassende Suite für YouTube-Wachstum mit KI-Coaching und Ideen.",
+    features: ["Keyword Research", "Daily Ideas", "Competitor Analysis", "AI Coach"],
+    url: "https://vidiq.com/",
+    rating: 4.8,
+    isPremium: false,
+    tags: ["YouTube", "SEO", "Analytics"]
+  },
+  {
+    id: 57,
+    name: "AutoPod",
+    category: "video",
+    description: "Plugin für Adobe Premiere Pro zum automatischen Schneiden von Podcasts.",
+    features: ["Multi-Camera Edit", "Jump Cut Editor", "Social Clip Creator", "Premiere Plugin"],
+    url: "https://www.autopod.fm/",
+    rating: 4.7,
+    isPremium: true,
+    tags: ["Editing", "Podcast", "Plugin"]
+  },
+  {
+    id: 58,
+    name: "Zapier",
+    category: "content",
+    description: "Verbindet Apps und automatisiert Workflows ohne Code.",
+    features: ["Automation", "Integrationen", "No-Code", "Multi-Step Zaps"],
+    url: "https://zapier.com/",
+    rating: 4.9,
+    isPremium: false,
+    tags: ["Automation", "Produktivität", "Workflow"]
+  },
+  {
+    id: 59,
+    name: "Make.com",
+    category: "content",
+    description: "Visuelle Plattform für komplexe Automatisierungen und Workflows.",
+    features: ["Visual Builder", "Complex Workflows", "API Integration", "Scenario Templates"],
+    url: "https://www.make.com/",
+    rating: 4.8,
+    isPremium: false,
+    tags: ["Automation", "Visual", "Advanced"]
+  },
+  {
+    id: 60,
+    name: "Pincel",
+    category: "images",
+    description: "KI-Bildbearbeitung mit Tools wie Face Swap, Clothes Swap und AI Portraits.",
+    features: ["Face Swap", "Clothes Swap", "AI Portraits", "Object Removal"],
+    url: "https://pincel.app/",
+    rating: 4.3,
+    isPremium: false,
+    tags: ["Fun", "Bearbeitung", "Social Media"]
+  },
+  {
+    id: 61,
+    name: "Murf AI",
+    category: "phone",
+    description: "Vielseitiger KI-Stimmgenerator für professionelle Voiceovers.",
+    features: ["Voiceovers", "Voice Changer", "Google Slides Add-on", "Canva Integration"],
+    url: "https://murf.ai/",
+    rating: 4.6,
+    isPremium: true,
+    tags: ["Audio", "Voiceover", "Professional"]
+  },
+  {
+    id: 62,
+    name: "Visla",
+    category: "video",
+    description: "All-in-One Plattform für Videoaufnahme, -bearbeitung und -freigabe mit KI.",
+    features: ["Text-to-Video", "Screen Recording", "AI Editing", "Collaboration"],
+    url: "https://www.visla.us/",
+    rating: 4.5,
+    isPremium: false,
+    tags: ["Video", "Recording", "Team"]
+  },
+  {
+    id: 63,
+    name: "Kaiber",
+    category: "video",
+    description: "Kreative KI für Musikvideos und Animationen mit einzigartigem Stil.",
+    features: ["Audio Reactivity", "Animation", "Style Transform", "Spotify Canvas"],
+    url: "https://kaiber.ai/",
+    rating: 4.7,
+    isPremium: true,
+    tags: ["Kreativ", "Musik", "Animation"]
+  },
+  {
+    id: 64,
+    name: "Artlist",
+    category: "video",
+    description: "Plattform für lizenzfreie Musik und Stock-Footage mit neuen KI-Tools.",
+    features: ["Stock Footage", "Music", "AI Voiceover", "Video Templates"],
+    url: "https://artlist.io/",
+    rating: 4.8,
+    isPremium: true,
+    tags: ["Stock", "Audio", "Creative Assets"]
+  },
+  {
+    id: 65,
+    name: "Sora",
+    category: "video",
+    description: "OpenAIs bahnbrechendes Text-zu-Video Modell (aktuell in Entwicklung/Preview).",
+    features: ["High Fidelity", "Complex Scenes", "Motion Quality", "Long Clips"],
+    url: "https://openai.com/sora",
+    rating: 4.9,
+    isPremium: true,
+    tags: ["Future", "High-End", "OpenAI"]
+  },
+  {
+    id: 66,
+    name: "Google Veo",
+    category: "video",
+    description: "Googles fortschrittlichstes Modell für generative Videoinhalte.",
+    features: ["1080p+ Resolution", "Cinematic Styles", "Long Context", "Visual Effects"],
+    url: "https://deepmind.google/technologies/veo/",
+    rating: 4.8,
+    isPremium: true,
+    tags: ["Google", "High-End", "Research"]
+  },
+  // Hidden Gems & User Recommendations
+  {
+    id: 67,
+    name: "LLaVA AI",
+    category: "chat",
+    description: "Open-Source Multimodal AI, die Bilder verstehen und darüber chatten kann.",
+    features: ["Visual Understanding", "Open Source", "Multimodal", "Image Chat"],
+    url: "https://llava.lmsys.org/",
+    rating: 4.5,
+    isPremium: false,
+    isNew: true,
+    tags: ["Open Source", "Research", "Vision"]
+  },
+  {
+    id: 68,
+    name: "Ideogram",
+    category: "images",
+    description: "Kostenloser KI-Bildgenerator, der besonders gut Text in Bildern darstellen kann.",
+    features: ["Typography", "Text-in-Image", "Remix", "High Quality"],
+    url: "https://ideogram.ai/",
+    rating: 4.7,
+    isPremium: false,
+    isNew: true,
+    tags: ["Text-to-Image", "Design", "Free"]
+  },
+  {
+    id: 69,
+    name: "Pixelcut",
+    category: "images",
+    description: "Kostenloses Toolset für E-Commerce Bilder: Hintergrund entfernen, Upscaling und mehr.",
+    features: ["Background Remover", "Magic Eraser", "Upscaler", "Product Photos"],
+    url: "https://pixelcut.ai/",
+    rating: 4.6,
+    isPremium: false,
+    isNew: true,
+    tags: ["E-Commerce", "Editing", "Productivity"]
+  },
+  {
+    id: 70,
+    name: "SciSpace",
+    category: "content",
+    description: "KI-Copilot für die Wissenschaft: Erklärt Papers, fasst zusammen und beantwortet Fragen.",
+    features: ["Paper Analysis", "Citation Generator", "Research Assistant", "Chat with PDF"],
+    url: "https://scispace.com/",
+    rating: 4.8,
+    isPremium: false,
+    isNew: true,
+    tags: ["Science", "Research", "Education"]
+  },
+  {
+    id: 71,
+    name: "Napkin AI",
+    category: "content",
+    description: "Verwandelt Text automatisch in visuelle Diagramme und Infografiken.",
+    features: ["Text-to-Diagram", "Visual Storytelling", "Business Graphics", "Easy Export"],
+    url: "https://www.napkin.ai/",
+    rating: 4.5,
+    isPremium: false,
+    isNew: true,
+    tags: ["Visuals", "Productivity", "Business"]
+  },
+  {
+    id: 72,
+    name: "AudioPen",
+    category: "content",
+    description: "Verwandelt wirre Sprachnotizen in gut strukturierten, geschriebenen Text.",
+    features: ["Voice-to-Text", "Summarization", "Rewriting", "Multi-language"],
+    url: "https://audiopen.ai/",
+    rating: 4.7,
+    isPremium: false,
+    isNew: true,
+    tags: ["Notes", "Productivity", "Writing"]
+  },
+  {
+    id: 73,
+    name: "Songburst",
+    category: "video",
+    description: "Erstelle eigene Musik und Soundtracks für Videos durch Text-Prompts.",
+    features: ["Text-to-Music", "Royalty Free", "Video Soundtracks", "Easy Creation"],
+    url: "https://songburst.ai/",
+    rating: 4.4,
+    isPremium: false,
+    isNew: true,
+    tags: ["Music", "Audio", "Creative"]
+  },
+  {
+    id: 74,
+    name: "Raphael AI",
+    category: "images",
+    description: "Kostenloser und unbegrenzter KI-Bildgenerator (basierend auf FLUX Modellen).",
+    features: ["Unlimited Generation", "No Sign-up", "High Quality", "Fast"],
+    url: "https://raphael.app/",
+    rating: 4.3,
+    isPremium: false,
+    isNew: true,
+    tags: ["Unlimited", "Free", "Generative Art"]
+  },
+  {
+    id: 75,
+    name: "Perchance AI",
+    category: "images",
+    description: "Komplett kostenloser, werbefreier Bildgenerator ohne Anmeldung.",
+    features: ["No Login", "Unlimited", "Community Models", "Customizable"],
+    url: "https://perchance.org/ai-text-to-image-generator",
+    rating: 4.2,
+    isPremium: false,
+    isNew: true,
+    tags: ["Free", "No Login", "Community"]
+  },
+  {
+    id: 76,
+    name: "Grok Imagine",
+    category: "images",
+    description: "X's (Twitter) KI für unzensierte und kreative Bild- und Videogenerierung.",
+    features: ["Image Gen", "Video Gen", "Real-time", "Creative Freedom"],
+    url: "https://grok.com/imagine",
+    rating: 4.6,
+    isPremium: false,
+    isNew: true,
+    tags: ["X", "Grok", "Uncensored"]
+  },
+  {
+    id: 77,
+    name: "AgenticFlow",
+    category: "content",
+    description: "No-Code Plattform zum Erstellen und Skalieren von KI-Agenten für Business-Aufgaben.",
+    features: ["No-Code Agents", "Sales Automation", "Marketing Agents", "Multi-Tool Integration"],
+    url: "https://agenticflow.com/",
+    rating: 4.8,
+    isPremium: true,
+    isNew: true,
+    tags: ["Automation", "Agents", "Business"]
+  },
+  {
+    id: 78,
+    name: "Gamma App",
+    category: "content",
+    description: "Erstellt wunderschöne Präsentationen, Dokumente und Webseiten aus einfachen Text-Prompts.",
+    features: ["AI Presentations", "One-Click Polish", "Embed Anything", "Analytics"],
+    url: "https://gamma.app/",
+    rating: 4.8,
+    isPremium: true,
+    isNew: true,
+    tags: ["Präsentationen", "Design", "Business"]
+  },
+  {
+    id: 79,
+    name: "Suno AI",
+    category: "video",
+    description: "Generiert komplette Songs mit Gesang und Text aus einfachen Beschreibungen (Radio-Qualität).",
+    features: ["Text-to-Music", "Vocals & Lyrics", "Diverse Genres", "Full Songs"],
+    url: "https://suno.com/",
+    rating: 4.9,
+    isPremium: false,
+    isNew: true,
+    tags: ["Musik", "Audio", "Viral"]
+  },
+  {
+    id: 80,
+    name: "Luma AI",
+    category: "video",
+    description: "Erstellt fotorealistische 3D-Modelle und Videos (Dream Machine) aus Text und Bildern.",
+    features: ["Text-to-3D", "Video Generation", "NeRF Technology", "Interactive Scenes"],
+    url: "https://lumalabs.ai/",
+    rating: 4.7,
+    isPremium: false,
+    isNew: true,
+    tags: ["3D", "Video", "Future"]
+  },
+  {
+    id: 81,
+    name: "Elicit",
+    category: "content",
+    description: "KI-Forschungsassistent, der Millionen von Papers analysiert und Fragen wissenschaftlich beantwortet.",
+    features: ["Literature Review", "Paper Summary", "Data Extraction", "Citation Finder"],
+    url: "https://elicit.com/",
+    rating: 4.8,
+    isPremium: false,
+    isNew: true,
+    tags: ["Wissenschaft", "Recherche", "Studium"]
+  },
+  {
+    id: 82,
+    name: "Descript",
+    category: "video",
+    description: "Bearbeite Audio und Video so einfach wie ein Textdokument (durch Bearbeiten des Transkripts).",
+    features: ["Overdub", "Studio Sound", "Filler Word Removal", "Transcription"],
+    url: "https://www.descript.com/",
+    rating: 4.7,
+    isPremium: true,
+    isNew: true,
+    tags: ["Editing", "Podcast", "Video"]
+  },
+  {
+    id: 83,
+    name: "Lalal.ai",
+    category: "phone",
+    description: "Extrahiert Gesang, Instrumente und Drums aus jeder Audiodatei mit höchster Präzision.",
+    features: ["Stem Splitter", "Vocal Remover", "Noise Cancellation", "High Quality"],
+    url: "https://www.lalal.ai/",
+    rating: 4.6,
+    isPremium: true,
+    isNew: true,
+    tags: ["Audio", "Musik", "Produktion"]
+  },
+  {
+    id: 84,
+    name: "Scribble Diffusion",
+    category: "images",
+    description: "Verwandelt deine krakeligen Skizzen in professionelle Bilder und Kunstwerke.",
+    features: ["Sketch-to-Image", "Real-time", "Easy to use", "Open Source"],
+    url: "https://scribblediffusion.com/",
+    rating: 4.4,
+    isPremium: false,
+    isNew: true,
+    tags: ["Fun", "Sketch", "Art"]
+  },
+  {
+    id: 85,
+    name: "Lumen5",
+    category: "video",
+    description: "Verwandelt Blog-Posts und Texte automatisch in ansprechende Marketing-Videos.",
+    features: ["Blog-to-Video", "AI Scripting", "Stock Media", "Branding"],
+    url: "https://lumen5.com/",
+    rating: 4.5,
+    isPremium: true,
+    isNew: true,
+    tags: ["Marketing", "Social Media", "Business"]
+  },
+  {
+    id: 86,
+    name: "Notion AI",
+    category: "content",
+    description: "Integrierter KI-Assistent in Notion für Zusammenfassungen, Brainstorming und Textverbesserung.",
+    features: ["Summarization", "Translation", "Brainstorming", "Editing"],
+    url: "https://www.notion.so/product/ai",
+    rating: 4.7,
+    isPremium: true,
+    isNew: true,
+    tags: ["Produktivität", "Notizen", "Workflow"]
+  },
+  {
+    id: 87,
+    name: "Teachable Machine",
+    category: "code",
+    description: "Googles einfaches Tool, um KI-Modelle mit Bildern, Tönen oder Posen zu trainieren (ohne Code).",
+    features: ["No-Code ML", "Image Recognition", "Audio Recognition", "Export Models"],
+    url: "https://teachablemachine.withgoogle.com/",
+    rating: 4.6,
+    isPremium: false,
+    isNew: true,
+    tags: ["Lernen", "Google", "Experiment"]
   }
 ];
 
 export const getToolsByCategory = (category: string) => {
+  if (category === 'all') return toolsData;
   return toolsData.filter(tool => tool.category === category);
 };
 

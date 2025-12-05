@@ -30,6 +30,7 @@ function App() {
       case 'phone':
       case 'website':
       case 'content':
+      case 'youtube':
         return <CategoryView category={activeCategory} />;
       default:
         return <Home onCategoryChange={setActiveCategory} />;

@@ -19,7 +19,8 @@ const CategoryView: React.FC<CategoryViewProps> = ({ category }) => {
     chat: 'Chat-KI Tools',
     phone: 'Telefon & Sprach-KI',
     website: 'Website Builder KI',
-    content: 'Content-KI Tools'
+    content: 'Content-KI Tools',
+    youtube: 'YouTube Analyse Tools'
   };
 
   const categoryDescriptions: { [key: string]: string } = {
@@ -28,7 +29,8 @@ const CategoryView: React.FC<CategoryViewProps> = ({ category }) => {
     chat: 'Intelligente Chatbots, Coding-Assistenten und Konversations-KI',
     phone: 'Sprach-KI Services, Transkription und Telefonie-Unterstützung',
     website: 'KI-gestützte Website-Builder und Design-Assistenten',
-    content: 'KI-Tools für Textgenerierung, Content-Marketing und SEO'
+    content: 'KI-Tools für Textgenerierung, Content-Marketing und SEO',
+    youtube: 'KI-Tools für YouTube: Analyse, Content-Erstellung und Optimierung'
   };
 
   let tools = getToolsByCategory(category);
@@ -147,11 +149,10 @@ const CategoryView: React.FC<CategoryViewProps> = ({ category }) => {
 
         {/* Tools Grid/List */}
         {tools.length > 0 ? (
-          <div className={`grid gap-6 ${
-            viewMode === 'grid' 
-              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-              : 'grid-cols-1'
-          }`}>
+          <div className={`grid gap-6 ${viewMode === 'grid'
+            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+            : 'grid-cols-1'
+            }`}>
             {tools.map((tool) => (
               <ToolCard key={tool.id} tool={tool} />
             ))}

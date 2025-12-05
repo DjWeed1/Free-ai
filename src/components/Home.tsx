@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Video, MessageSquare, Phone, Globe, BookOpen, FileText, ArrowRight, Star, Sparkles } from 'lucide-react';
+import { Image, Video, MessageSquare, Phone, Globe, BookOpen, FileText, ArrowRight, Star, Sparkles, Youtube } from 'lucide-react';
 import HeroSection from './HeroSection';
 import FeaturesGrid from './FeaturesGrid';
 import VoiceAI from './VoiceAI';
@@ -11,17 +11,18 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ onCategoryChange }) => {
   const categories = [
     { id: 'prompts', name: 'Prompts', description: 'Kuratierte Prompts für ChatGPT, Midjourney & Co.', icon: Sparkles, gradient: 'from-indigo-500 to-purple-500', tools: ['Chat', 'Bilder', 'Code', 'Writing'], count: '50+ Prompts' },
-    { id: 'images', name: 'Bilder', description: 'KI-Tools für Bildgenerierung und -bearbeitung', icon: Image, gradient: 'from-pink-500 to-violet-500', tools: ['DALL-E 2', 'Leonardo.ai', 'Canva AI'], count: '15+ Tools' },
-    { id: 'video', name: 'Video', description: 'Videogenerierung und -bearbeitung mit KI', icon: Video, gradient: 'from-blue-500 to-cyan-500', tools: ['RunwayML', 'Pika Labs', 'Synthesia'], count: '12+ Tools' },
-    { id: 'chat', name: 'Chat', description: 'KI-Chatbots und Konversationstools', icon: MessageSquare, gradient: 'from-green-500 to-emerald-500', tools: ['ChatGPT', 'Claude', 'Google Bard'], count: '20+ Tools' },
-    { id: 'phone', name: 'Telefon', description: 'Sprach-KI und Telefonie-Services', icon: Phone, gradient: 'from-orange-500 to-red-500', tools: ['Google Voice', 'Otter.ai', 'Krisp'], count: '8+ Tools' },
-    { id: 'website', name: 'Website Builder', description: 'KI-gestützte Website-Erstellung', icon: Globe, gradient: 'from-purple-500 to-indigo-5', tools: ['Wix ADI', '10Web', 'Jimdo'], count: '10+ Tools' },
-    { id: 'content', name: 'Content', description: 'KI-Textgenerierung und Content-Erstellung', icon: FileText, gradient: 'from-teal-500 to-blue-500', tools: ['Copy.ai', 'Jasper', 'Writesonic'], count: '18+ Tools' },
+    { id: 'images', name: 'Bilder', description: 'KI-Tools für Bildgenerierung und -bearbeitung', icon: Image, gradient: 'from-pink-500 to-violet-500', tools: ['Ideogram', 'Pixelcut', 'Grok Imagine'], count: '13+ Tools' },
+    { id: 'video', name: 'Video', description: 'Videogenerierung und -bearbeitung mit KI', icon: Video, gradient: 'from-blue-500 to-cyan-500', tools: ['RunwayML', 'Sora', 'Kling AI'], count: '24+ Tools' },
+    { id: 'chat', name: 'Chat', description: 'KI-Chatbots und Konversationstools', icon: MessageSquare, gradient: 'from-green-500 to-emerald-500', tools: ['ChatGPT', 'Claude', 'LLaVA AI'], count: '6+ Tools' },
+    { id: 'phone', name: 'Telefon', description: 'Sprach-KI und Telefonie-Services', icon: Phone, gradient: 'from-orange-500 to-red-500', tools: ['ElevenLabs', 'Murf AI', 'Google Voice'], count: '8+ Tools' },
+    { id: 'website', name: 'Website Builder', description: 'KI-gestützte Website-Erstellung', icon: Globe, gradient: 'from-purple-500 to-indigo-5', tools: ['Wix ADI', '10Web', 'Jimdo'], count: '5+ Tools' },
+    { id: 'content', name: 'Content', description: 'KI-Textgenerierung und Content-Erstellung', icon: FileText, gradient: 'from-teal-500 to-blue-500', tools: ['Napkin AI', 'SciSpace', 'AudioPen'], count: '20+ Tools' },
+    { id: 'youtube', name: 'YouTube', description: 'Tools für Video-Analyse und Zusammenfassung', icon: Youtube, gradient: 'from-red-600 to-rose-600', tools: ['Eightify', 'Gling AI', 'Opus Clip'], count: '10+ Tools' },
   ];
 
   const stats = [
-    { label: 'Kostenlose KI-Tools', value: '100+', icon: Star },
-    { label: 'Kategorien', value: '7', icon: Globe },
+    { label: 'Kostenlose KI-Tools', value: '85+', icon: Star },
+    { label: 'Kategorien', value: '8', icon: Globe },
     { label: 'Lexikon-Einträge', value: '50+', icon: BookOpen },
   ];
 

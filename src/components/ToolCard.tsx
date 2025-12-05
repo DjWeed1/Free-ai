@@ -20,19 +20,23 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
                 <Crown size={14} className="text-white" />
               </div>
             )}
+            {tool.isNew && (
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+                Neu
+              </span>
+            )}
           </div>
-          
+
           <div className="flex items-center gap-2 mb-3">
             <div className="flex items-center gap-1">
               <Star size={14} className="text-yellow-400 fill-current" />
               <span className="text-sm font-medium text-gray-700">{tool.rating}</span>
             </div>
             <span className="text-gray-300">•</span>
-            <span className={`text-xs px-2 py-1 rounded-full ${
-              tool.isPremium 
-                ? 'bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700' 
+            <span className={`text-xs px-2 py-1 rounded-full ${tool.isPremium
+                ? 'bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700'
                 : 'bg-green-100 text-green-700'
-            }`}>
+              }`}>
               {tool.isPremium ? 'Freemium' : 'Kostenlos'}
             </span>
           </div>
