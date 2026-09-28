@@ -5,6 +5,7 @@ A curated AI-tool hub with categories, prompts, an AI lexicon, authentication, c
 ## Features
 
 - Curated AI tools across images, video, chat, phone, websites, content and YouTube
+- Expanded AI lexicon with modern concepts such as RAG, embeddings, agents, tool calling, context windows, quantization and prompt injection
 - Prompt collection and AI terminology lexicon
 - Authentication and dashboard components
 - Built-in search and conversational UI
@@ -21,9 +22,11 @@ npm run dev
 
 ## Change Log
 
-### 2026-09-28 15:xx Europe/Vienna (CEST) — Feature / Portfolio / UX
-- Added **Snake Segment**, including growing snake segments, food spawning, collision detection, score tracking, restart flow, keyboard controls (Arrow keys/WASD) and touch-friendly on-screen controls.
-- Added Snake to the main navigation so the feature is directly discoverable on desktop and mobile.
-- Kept the feature self-contained in `src/components/SnakeGame.tsx` without introducing a new runtime dependency.
+### 2026-09-28 03:33 Europe/Vienna (CEST) — Feature / Portfolio / UX
+- Added **Snake Segment**, including growing snake segments, food spawning, collision detection, score tracking, restart flow, keyboard controls (Arrow keys/WASD) and on-screen controls.
+- Added Snake to desktop and mobile navigation.
+- Hardened the Snake board layout and collision handling so the 18×18 board does not depend on an unavailable default Tailwind grid class and moving into the previous tail cell is handled correctly.
+- Expanded the KI-Lexikon by 20 modern entries covering RAG, Embeddings, Vector Databases, Multimodal AI, Agents, Tool Calling, Context Windows, Tokens, Inference, Quantization, LoRA, RLHF, Synthetic Data, Grounding, Guardrails, Evaluation, Prompt Injection and AI Observability.
+- Added a basic security baseline and CI validation for install, lint and production build.
 
-> Note: The timestamp records the local Vienna time when this repository change was made.
+> The timestamp above is based on the recorded local Vienna time of the Free-AI change set.
