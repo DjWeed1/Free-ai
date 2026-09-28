@@ -29,7 +29,7 @@ npm run dev
 - Expanded the KI-Lexikon by 20 modern entries covering RAG, Embeddings, Vector Databases, Multimodal AI, Agents, Tool Calling, Context Windows, Tokens, Inference, Quantization, LoRA, RLHF, Synthetic Data, Grounding, Guardrails, Evaluation, Prompt Injection and AI Observability.
 - Added a basic security baseline and CI validation for install, lint and production build.
 
-### 2026-09-28 03:xx Europe/Vienna (CEST) — Reliability / Deployment
+### 2026-09-28 03:42 Europe/Vienna (CEST) — Reliability / Deployment
 - Changed the Vite asset base to a relative path so the production build can be served from a repository subpath as well as a root deployment.
 
-> Times are recorded in Europe/Vienna for the corresponding repository changes.
+> Times use verified Europe/Vienna minutes recorded during the corresponding Free-AI change set.
