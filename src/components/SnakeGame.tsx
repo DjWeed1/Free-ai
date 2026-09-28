@@ -33,7 +33,6 @@ function randomFood(snake: Point[]): Point {
 const SnakeGame: React.FC = () => {
   const [snake, setSnake] = useState<Point[]>(START_SNAKE);
   const [food, setFood] = useState<Point>(() => randomFood(START_SNAKE));
-  const [direction, setDirection] = useState<Direction>('right');
   const [queuedDirection, setQueuedDirection] = useState<Direction>('right');
   const [score, setScore] = useState(0);
   const [running, setRunning] = useState(false);
@@ -43,7 +42,6 @@ const SnakeGame: React.FC = () => {
     const initial = [...START_SNAKE];
     setSnake(initial);
     setFood(randomFood(initial));
-    setDirection('right');
     setQueuedDirection('right');
     setScore(0);
     setGameOver(false);
@@ -58,14 +56,8 @@ const SnakeGame: React.FC = () => {
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       const keys: Record<string, Direction | undefined> = {
-        ArrowUp: 'up',
-        w: 'up',
-        ArrowDown: 'down',
-        s: 'down',
-        ArrowLeft: 'left',
-        a: 'left',
-        ArrowRight: 'right',
-        d: 'right',
+        ArrowUp: 'up', w: 'up', ArrowDown: 'down', s: 'down',
+        ArrowLeft: 'left', a: 'left', ArrowRight: 'right', d: 'right',
       };
       const next = keys[event.key];
       if (!next) return;
@@ -82,13 +74,13 @@ const SnakeGame: React.FC = () => {
 
     const timer = window.setInterval(() => {
       setSnake((current) => {
-        const nextDirection = queuedDirection;
-        setDirection(nextDirection);
         const head = current[0];
-        const delta = DELTAS[nextDirection];
+        const delta = DELTAS[queuedDirection];
         const nextHead = { x: head.x + delta.x, y: head.y + delta.y };
         const hitWall = nextHead.x < 0 || nextHead.y < 0 || nextHead.x >= BOARD_SIZE || nextHead.y >= BOARD_SIZE;
-        const hitSelf = current.some((part) => part.x === nextHead.x && part.y === nextHead.y);
+        const ateFood = nextHead.x === food.x && nextHead.y === food.y;
+        const bodyToCheck = ateFood ? current : current.slice(0, -1);
+        const hitSelf = bodyToCheck.some((part) => part.x === nextHead.x && part.y === nextHead.y);
 
         if (hitWall || hitSelf) {
           setGameOver(true);
@@ -96,14 +88,11 @@ const SnakeGame: React.FC = () => {
           return current;
         }
 
-        const ateFood = nextHead.x === food.x && nextHead.y === food.y;
         const nextSnake = ateFood ? [nextHead, ...current] : [nextHead, ...current.slice(0, -1)];
-
         if (ateFood) {
           setScore((value) => value + 1);
           setFood(randomFood(nextSnake));
         }
-
         return nextSnake;
       });
     }, 125);
@@ -124,7 +113,7 @@ const SnakeGame: React.FC = () => {
         <div className="rounded-xl bg-gray-100 px-4 py-2 text-sm font-bold text-gray-800">Score: {score}</div>
       </div>
 
-      <div className="mx-auto grid aspect-square w-full max-w-lg grid-cols-18 gap-px rounded-xl bg-gray-200 p-1" role="application" aria-label="Snake Segment Spielbrett">
+      <div className="mx-auto grid aspect-square w-full max-w-lg grid-cols-[repeat(18,minmax(0,1fr))] gap-px rounded-xl bg-gray-200 p-1" role="application" aria-label="Snake Segment Spielbrett">
         {cells.map((_, index) => {
           const x = index % BOARD_SIZE;
           const y = Math.floor(index / BOARD_SIZE);
@@ -141,17 +130,15 @@ const SnakeGame: React.FC = () => {
       </div>
 
       <div className="mt-5 flex flex-wrap justify-center gap-2" aria-label="Snake Steuerung">
-        <button className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('up')}>↑</button>
-        <button className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('left')}>←</button>
-        <button className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('down')}>↓</button>
-        <button className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('right')}>→</button>
+        <button aria-label="Nach oben" className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('up')}>↑</button>
+        <button aria-label="Nach links" className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('left')}>←</button>
+        <button aria-label="Nach unten" className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('down')}>↓</button>
+        <button aria-label="Nach rechts" className="rounded-lg bg-gray-900 px-4 py-2 font-semibold text-white" onClick={() => changeDirection('right')}>→</button>
       </div>
 
       <div className="mt-4 text-center">
         {!running && !gameOver && <button className="rounded-xl bg-indigo-600 px-6 py-3 font-bold text-white" onClick={reset}>Spiel starten</button>}
-        {gameOver && (
-          <button className="rounded-xl bg-indigo-600 px-6 py-3 font-bold text-white" onClick={reset}>Nochmal spielen</button>
-        )}
+        {gameOver && <button className="rounded-xl bg-indigo-600 px-6 py-3 font-bold text-white" onClick={reset}>Nochmal spielen</button>}
         <p className="mt-2 text-xs text-gray-500">Tastatur: Pfeiltasten oder WASD</p>
       </div>
     </section>
