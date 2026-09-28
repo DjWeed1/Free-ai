@@ -7,6 +7,7 @@ import Prompts from './components/Prompts';
 import ChatBot from './components/ChatBot';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import SnakeGame from './components/SnakeGame';
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         return <Lexicon />;
       case 'prompts':
         return <Prompts />;
+      case 'snake':
+        return <SnakeGame />;
       case 'login':
         return <Login onLoginSuccess={() => setActiveCategory('dashboard')} />;
       case 'dashboard':
