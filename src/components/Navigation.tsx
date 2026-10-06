@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Search, Home, Image, Video, MessageSquare, Phone, Globe, FileText, BookOpen, Sparkles, LogIn, LogOut } from 'lucide-react';
+import { Menu, X, Search, Home, Image, Video, MessageSquare, Phone, Globe, FileText, BookOpen, Sparkles, LogIn, LogOut, Brain } from 'lucide-react';
 import GlobalSearch from './GlobalSearch';
 import { useAuth } from '../context/AuthContext';
 
@@ -17,6 +17,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeCategory, onCategoryChang
     { id: 'home', label: 'Home', icon: Home },
     { id: 'prompts', label: 'Prompts', icon: Sparkles },
     { id: 'lexicon', label: 'Lexikon', icon: BookOpen },
+    { id: 'aihub', label: 'AI Hub', icon: Brain },
     { id: 'images', label: 'Bilder', icon: Image },
     { id: 'video', label: 'Video', icon: Video },
     { id: 'chat', label: 'Chat', icon: MessageSquare },
@@ -55,7 +56,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeCategory, onCategoryChang
                 <Search size={20} />
               </button>
 
-              {navItems.slice(0, 6).map((item) => {
+              {navItems.slice(0, 7).map((item) => {
                 const Icon = item.icon;
                 return (
                   <button
