@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Menu, X, Search, Home, Image, Video, MessageSquare, Phone, Globe, FileText, BookOpen, Sparkles, LogIn, LogOut, Brain } from 'lucide-react';
 import GlobalSearch from './GlobalSearch';
 import { useAuth } from '../context/AuthContext';
+import LanguageSwitcher from './LanguageSwitcher';
+import { translations, detectLanguage } from '../i18n';
 
 interface NavigationProps {
   activeCategory: string;
@@ -12,6 +14,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeCategory, onCategoryChang
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { user, logout } = useAuth();
+  const [lang, setLang] = useState(detectLanguage());
+  const t = translations[lang];
 
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
@@ -68,7 +72,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeCategory, onCategoryChang
                       }`}
                   >
                     <Icon size={16} className="mr-1.5" />
-                    {item.label}
+                    {t[item.id] ?? item.label}
                   </button>
                 );
               })}
