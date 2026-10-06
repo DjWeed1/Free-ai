@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Wrench, BookOpen, Sparkles } from 'lucide-react';
 import { searchTools, Tool } from '../data/toolsData';
-import { searchLexicon, LexiconTerm } from '../data/lexiconData';
+import { searchLexicon, LexiconEntry } from '../data/lexiconData';
 import { searchPrompts, Prompt } from '../data/promptsData';
 
 interface GlobalSearchProps {
@@ -14,7 +14,7 @@ const GlobalSearch: React.FC<GlobalSearchProps> = ({ isOpen, onClose, onNavigate
     const [query, setQuery] = useState('');
     const [results, setResults] = useState<{
         tools: Tool[];
-        lexicon: LexiconTerm[];
+        lexicon: LexiconEntry[];
         prompts: Prompt[];
     }>({ tools: [], lexicon: [], prompts: [] });
 
