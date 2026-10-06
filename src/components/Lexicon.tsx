@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { detectLanguage, type LanguageCode } from '../i18n';
 import { Search, BookOpen, Tag, ArrowRight, Brain, Lightbulb } from 'lucide-react';
 import { allLexiconData, searchLexicon } from '../data/lexiconData';
@@ -15,7 +15,6 @@ const Lexicon: React.FC = () => {
     return () => window.removeEventListener('free-ai-language-change', syncLanguage);
   }, []);
 
-  const languageNote = useMemo(() => language === 'de' ? 'Deutsch' : language.toUpperCase(), [language]);
 
   const categories = ['all', ...Array.from(new Set(allLexiconData.map(term => term.category))).sort()];
 
