@@ -7,6 +7,7 @@ import Prompts from './components/Prompts';
 import ChatBot from './components/ChatBot';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import AIHub from './components/AIHub';
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         return <Home onCategoryChange={setActiveCategory} />;
       case 'lexicon':
         return <Lexicon />;
+      case 'aihub':
+        return <AIHub />;
       case 'prompts':
         return <Prompts />;
       case 'login':
