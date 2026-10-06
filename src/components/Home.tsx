@@ -3,6 +3,9 @@ import { Image, Video, MessageSquare, Phone, Globe, BookOpen, FileText, ArrowRig
 import HeroSection from './HeroSection';
 import FeaturesGrid from './FeaturesGrid';
 import VoiceAI from './VoiceAI';
+import { allLexiconData } from '../data/lexiconData';
+import { toolsData } from '../data/toolsData';
+import { promptsData } from '../data/promptsData';
 
 interface HomeProps { onCategoryChange: (category: string) => void; }
 
@@ -19,9 +22,9 @@ const Home: React.FC<HomeProps> = ({ onCategoryChange }) => {
   ];
 
   const stats = [
-    { label:'Kostenlose KI-Tools', value:'85+', icon:Star },
-    { label:'Tool-Kategorien', value:'8', icon:Globe },
-    { label:'Lexikon-Einträge', value:'160+', icon:BookOpen },
+    { label:'KI-Tools', value:String(toolsData.length)+'+', icon:Star },
+    { label:'Tool-Kategorien', value:String(new Set(toolsData.map(t=>t.category)).size), icon:Globe },
+    { label:'Lexikon-Einträge', value:String(allLexiconData.length)+'+', icon:BookOpen },
   ];
 
   return (
@@ -44,6 +47,7 @@ const Home: React.FC<HomeProps> = ({ onCategoryChange }) => {
           <button onClick={()=>onCategoryChange('lexicon')} className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2">Lexikon öffnen<ArrowRight size={20}/></button>
         </div></div>
       </div>
+      <section className="py-16 bg-slate-900 text-white"><div className="container mx-auto px-6 text-center"><h2 className="text-3xl font-bold mb-4">AI Knowledge & Discovery Hub</h2><p className="text-slate-300 max-w-2xl mx-auto mb-7">Tool Explorer, Modellvergleich, Entscheidungsassistent, Prompt Lab, Lernpfade, Agentenarchitektur und Local AI.</p><button onClick={()=>onCategoryChange('aihub')} className="bg-white text-slate-900 px-7 py-3 rounded-xl font-semibold">AI Hub öffnen</button></div></section>
       <VoiceAI />
     </div>
   );
