@@ -85,7 +85,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeCategory, onCategoryChang
                   className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-red-600 hover:bg-red-50 transition-colors ml-2"
                 >
                   <LogOut size={16} className="mr-1.5" />
-                  Logout
+                  {t.logout ?? 'Logout'}
                 </button>
               ) : (
                 <button
@@ -93,7 +93,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeCategory, onCategoryChang
                   className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-blue-600 hover:bg-blue-50 transition-colors ml-2"
                 >
                   <LogIn size={16} className="mr-1.5" />
-                  Login
+                  {t.login ?? 'Login'}
                 </button>
               )}
             </div>
