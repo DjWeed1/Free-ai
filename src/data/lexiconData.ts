@@ -6,6 +6,10 @@ export interface LexiconEntry {
   category: string;
   relatedTerms: string[];
   examples?: string[];
+  source?: string;
+  lastVerified?: string;
+  status?: 'verified' | 'review' | 'draft';
+  difficulty?: 'Anfänger' | 'Fortgeschritten' | 'Experte';
 }
 
 export const lexiconData: LexiconEntry[] = [
