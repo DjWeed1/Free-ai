@@ -45,7 +45,7 @@ const Lexicon: React.FC = () => {
               <input type="text" placeholder="Begriffe, Definitionen oder verwandte Begriffe durchsuchen..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
             </div>
             <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-              {categories.map(category => <option key={category} value={category}>{categoryNames[category]}</option>)}
+              {categories.map(category => <option key={category} value={category}>{{categoryNames[category] ?? category}</option>)}
             </select>
           </div>
         </div>
@@ -92,6 +92,7 @@ const Lexicon: React.FC = () => {
                     <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg"><Lightbulb size={20} className="text-white"/></div>
                     <div><h3 className="text-xl font-bold text-gray-900">{selectedTerm.term}</h3><span className="text-sm text-blue-600 font-medium">{selectedTerm.category}</span></div>
                   </div>
+                  <div className="mb-4 flex flex-wrap gap-2"><span className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded-full">{selectedTerm.status === 'verified' ? 'Verifiziert' : selectedTerm.status === 'review' ? 'Redaktionell geprüft / Review empfohlen' : 'Review ausstehend'}</span>{selectedTerm.lastVerified && <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">Stand: {selectedTerm.lastVerified}</span>}</div>
                   <div className="space-y-6">
                     <div><h4 className="text-sm font-semibold text-gray-900 mb-2">Definition:</h4><p className="text-gray-600 leading-relaxed">{selectedTerm.definition}</p></div>
                     {selectedTerm.examples?.length ? <div><h4 className="text-sm font-semibold text-gray-900 mb-2">Beispiele:</h4><ul className="space-y-1">{selectedTerm.examples.map((example,index)=><li key={index} className="text-sm text-gray-600 flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"/>{example}</li>)}</ul></div> : null}
