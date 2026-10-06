@@ -16,6 +16,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeCategory, onCategoryChang
   const { user, logout } = useAuth();
   const [lang, setLang] = useState(detectLanguage());
   const t = translations[lang];
+  useEffect(()=>{const onLang=()=>setLang(detectLanguage());window.addEventListener('free-ai-language-change',onLang);return()=>window.removeEventListener('free-ai-language-change',onLang)},[]);
 
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
