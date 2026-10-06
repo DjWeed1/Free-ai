@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X, Search, Home, Image, Video, MessageSquare, Phone, Globe, FileText, BookOpen, Sparkles, LogIn, LogOut, Brain } from 'lucide-react';
 import GlobalSearch from './GlobalSearch';
 import { useAuth } from '../context/AuthContext';
