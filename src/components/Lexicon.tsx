@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import { Search, BookOpen, Tag, ArrowRight, Brain, Lightbulb } from 'lucide-react';
-import { lexiconData, getLexiconByCategory, searchLexicon } from '../data/lexiconData';
+import { allLexiconData, searchLexicon } from '../data/lexiconData';
 
 const Lexicon: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTerm, setSelectedTerm] = useState<typeof lexiconData[0] | null>(null);
+  const [selectedTerm, setSelectedTerm] = useState<typeof allLexiconData[0] | null>(null);
 
-  const categories = [
-    'all','Grundlagen','Machine Learning','Daten','Architektur','LLM','Modelle',
-    'Generative AI','Audio & Sprache','Computer Vision','Sprache','Prompting',
-    'Training','Technik','Sicherheit & Qualität','Ethik & Governance','Agenten',
-    'Infrastruktur','Anwendungen','Governance'
-  ];
+  const categories = ['all', ...Array.from(new Set(allLexiconData.map(term => term.category))).sort()];
 
   const categoryNames: { [key: string]: string } = {
     all:'Alle Begriffe', Grundlagen:'Grundlagen', 'Machine Learning':'Machine Learning',
@@ -24,7 +19,7 @@ const Lexicon: React.FC = () => {
     Infrastruktur:'Infrastruktur', Anwendungen:'Anwendungen', Governance:'Governance'
   };
 
-  let filteredTerms = getLexiconByCategory(selectedCategory);
+  let filteredTerms = selectedCategory === 'all' ? allLexiconData : allLexiconData.filter(term => term.category === selectedCategory);
   if (searchQuery) {
     filteredTerms = searchLexicon(searchQuery);
     if (selectedCategory !== 'all') filteredTerms = filteredTerms.filter(term => term.category === selectedCategory);
