@@ -1,3 +1,4 @@
+import { extendedLexiconData } from './extendedLexiconData';
 export interface LexiconEntry {
   id: number;
   term: string;
@@ -170,15 +171,17 @@ export const lexiconData: LexiconEntry[] = [
   {id:160,term:"AI API",definition:"Programmierschnittstelle, über die Anwendungen KI-Funktionen wie Chat, Embeddings, Bilder, Audio oder Klassifikation nutzen können.",category:"Infrastruktur",relatedTerms:["API","SDK","Inference Endpoint"]}
 ];
 
+export const allLexiconData: LexiconEntry[] = [...lexiconData, ...extendedLexiconData];
+
 export const getLexiconByCategory = (category: string) => {
-  if (category === 'all') return lexiconData;
-  return lexiconData.filter(entry => entry.category === category);
+  if (category === 'all') return allLexiconData;
+  return allLexiconData.filter(entry => entry.category === category);
 };
 
 export const searchLexicon = (query: string) => {
   const q = query.trim().toLowerCase();
-  if (!q) return lexiconData;
-  return lexiconData.filter(entry =>
+  if (!q) return allLexiconData;
+  return allLexiconData.filter(entry =>
     entry.term.toLowerCase().includes(q) ||
     entry.definition.toLowerCase().includes(q) ||
     entry.relatedTerms.some(term => term.toLowerCase().includes(q)) ||
