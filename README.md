@@ -228,3 +228,21 @@ When adding an important factual claim about a current product or service, prefe
 ## License
 
 No explicit project license is currently documented in this repository. Check the repository before redistributing the project or its contents.
+
+
+## AI Knowledge & Discovery Hub
+
+Free-AI now includes an integrated AI Hub that brings the planned advanced layer into one interface:
+
+1. **Lexicon 2.0** — 453 AI concepts with dynamic categories and review metadata.
+2. **Tool Explorer** — searchable tool directory with free/local filters based on the repository's tool metadata.
+3. **Intelligent discovery** — unified search across AI concepts and tool metadata.
+4. **Model comparison** — structured profiles for major model families, including local/API/privacy dimensions.
+5. **Decision assistant** — ranks available tools against a user's stated goal and constraints.
+6. **Prompt Lab** — converts a rough prompt into a structured, reusable prompt template.
+7. **Learning paths** — guided tracks for AI basics, LLM engineering, agents, Local AI and Responsible AI.
+8. **Agent architecture** — visual workflow covering intent, planning, retrieval, tools/MCP and evaluation.
+9. **Local AI** — practical stack overview for GGUF, Ollama, llama.cpp, LM Studio and vLLM.
+10. **Trust & Quality** — explicit review status, verification dates, evaluation concepts and safety principles.
+
+The advanced Hub is intentionally designed as a knowledge/discovery layer first. Live prices, provider limits and third-party availability should be re-verified before being treated as current facts.
