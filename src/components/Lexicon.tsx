@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { detectLanguage, type LanguageCode } from '../i18n';
 import { Search, BookOpen, Tag, ArrowRight, Brain, Lightbulb } from 'lucide-react';
 import { allLexiconData, searchLexicon } from '../data/lexiconData';
 
@@ -6,6 +7,15 @@ const Lexicon: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTerm, setSelectedTerm] = useState<typeof allLexiconData[0] | null>(null);
+  const [language, setLanguage] = useState<LanguageCode>(detectLanguage());
+
+  useEffect(() => {
+    const syncLanguage = () => setLanguage(detectLanguage());
+    window.addEventListener('free-ai-language-change', syncLanguage);
+    return () => window.removeEventListener('free-ai-language-change', syncLanguage);
+  }, []);
+
+  const languageNote = useMemo(() => language === 'de' ? 'Deutsch' : language.toUpperCase(), [language]);
 
   const categories = ['all', ...Array.from(new Set(allLexiconData.map(term => term.category))).sort()];
 
@@ -34,7 +44,7 @@ const Lexicon: React.FC = () => {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">KI-Lexikon</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Eine wachsende Wissensbasis mit 160+ wichtigen KI-Begriffen – von Grundlagen über Machine Learning, LLMs und generative KI bis zu Agenten, Infrastruktur, Sicherheit und Governance.
+            Eine wachsende Wissensbasis mit 453 wichtigen KI-Begriffen – von Grundlagen über Machine Learning, LLMs und generative KI bis zu Agenten, Infrastruktur, Sicherheit und Governance.
           </p>
         </div>
 
