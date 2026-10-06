@@ -8,207 +8,166 @@ export interface LexiconEntry {
 }
 
 export const lexiconData: LexiconEntry[] = [
-  {
-    id: 1,
-    term: "Artificial Intelligence (KI)",
-    definition: "Die Simulation menschlicher Intelligenz in Maschinen, die programmiert sind, wie Menschen zu denken und zu lernen. KI umfasst verschiedene Technologien wie Machine Learning, Natural Language Processing und Computer Vision.",
-    category: "Grundlagen",
-    relatedTerms: ["Machine Learning", "Deep Learning", "Neural Network"],
-    examples: ["ChatGPT", "Siri", "Autonome Fahrzeuge"]
-  },
-  {
-    id: 2,
-    term: "Machine Learning",
-    definition: "Ein Teilbereich der KI, bei dem Algorithmen aus Daten lernen, ohne explizit für jede Aufgabe programmiert zu werden. Das System verbessert seine Leistung automatisch durch Erfahrung.",
-    category: "Technologie",
-    relatedTerms: ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning"],
-    examples: ["Spam-Filter", "Empfehlungssysteme", "Bilderkennung"]
-  },
-  {
-    id: 3,
-    term: "Deep Learning",
-    definition: "Eine Unterart des Machine Learning, die neuronale Netzwerke mit vielen Schichten (mindestens drei) verwendet, um komplexe Muster in großen Datenmengen zu erkennen.",
-    category: "Technologie",
-    relatedTerms: ["Neural Network", "CNN", "RNN"],
-    examples: ["Gesichtserkennung", "Sprachsynthese", "Bildgenerierung"]
-  },
-  {
-    id: 4,
-    term: "Neural Network",
-    definition: "Ein Computermodell, das von der Struktur und Funktion des menschlichen Gehirns inspiriert ist. Es besteht aus miteinander verbundenen Knoten (Neuronen), die Informationen verarbeiten.",
-    category: "Architektur",
-    relatedTerms: ["Perceptron", "Hidden Layer", "Activation Function"],
-    examples: ["Feedforward Network", "Convolutional Network", "Recurrent Network"]
-  },
-  {
-    id: 5,
-    term: "Natural Language Processing (NLP)",
-    definition: "Ein Bereich der KI, der sich darauf konzentriert, Computern die Fähigkeit zu geben, menschliche Sprache zu verstehen, zu interpretieren und zu generieren.",
-    category: "Anwendung",
-    relatedTerms: ["Text Mining", "Sentiment Analysis", "Language Model"],
-    examples: ["Google Translate", "Chatbots", "Text-zu-Sprache"]
-  },
-  {
-    id: 6,
-    term: "Computer Vision",
-    definition: "Ein Bereich der KI, der Maschinen die Fähigkeit verleiht, visuelle Informationen aus der realen Welt zu interpretieren und zu verstehen.",
-    category: "Anwendung",
-    relatedTerms: ["Image Recognition", "Object Detection", "OCR"],
-    examples: ["Autonomous Vehicles", "Medical Imaging", "Surveillance Systems"]
-  },
-  {
-    id: 7,
-    term: "Large Language Model (LLM)",
-    definition: "Große Sprachmodelle sind KI-Systeme, die auf riesigen Textdatensätzen trainiert wurden und natürliche Sprache verstehen und generieren können.",
-    category: "Modelle",
-    relatedTerms: ["GPT", "BERT", "Transformer"],
-    examples: ["GPT-4", "Claude", "PaLM"]
-  },
-  {
-    id: 8,
-    term: "Prompt Engineering",
-    definition: "Die Kunst und Wissenschaft, effektive Eingabeaufforderungen (Prompts) für KI-Modelle zu erstellen, um gewünschte und präzise Ausgaben zu erhalten.",
-    category: "Technik",
-    relatedTerms: ["Few-shot Learning", "Chain-of-Thought", "Prompt Tuning"],
-    examples: ["Spezifische Anweisungen", "Kontext setzen", "Beispiele geben"]
-  },
-  {
-    id: 9,
-    term: "Generative AI",
-    definition: "KI-Systeme, die neue Inhalte erstellen können, wie Text, Bilder, Audio oder Video, basierend auf Trainingsdaten und Benutzereingaben.",
-    category: "Technologie",
-    relatedTerms: ["GANs", "Diffusion Models", "VAE"],
-    examples: ["DALL-E", "Midjourney", "ChatGPT"]
-  },
-  {
-    id: 10,
-    term: "Transformer",
-    definition: "Eine neuronale Netzwerkarchitektur, die besonders effektiv für die Verarbeitung sequenzieller Daten ist und die Grundlage für moderne Sprachmodelle bildet.",
-    category: "Architektur",
-    relatedTerms: ["Attention Mechanism", "Self-Attention", "BERT"],
-    examples: ["GPT", "BERT", "T5"]
-  },
-  {
-    id: 11,
-    term: "Fine-tuning",
-    definition: "Der Prozess der Anpassung eines bereits trainierten Modells an eine spezifische Aufgabe oder Domain durch weiteres Training mit spezialisierten Daten.",
-    category: "Training",
-    relatedTerms: ["Transfer Learning", "Pre-training", "Domain Adaptation"],
-    examples: ["ChatGPT für Medizin", "BERT für Sentiment Analysis"]
-  },
-  {
-    id: 12,
-    term: "Halluzination",
-    definition: "Wenn ein KI-Modell falsche oder erfundene Informationen als Fakten präsentiert, obwohl sie nicht in den Trainingsdaten vorhanden waren.",
-    category: "Probleme",
-    relatedTerms: ["Model Confidence", "Factual Accuracy", "Verification"],
-    examples: ["Falsche Zitate", "Erfundene Ereignisse", "Nicht existierende Quellen"]
-  },
-  {
-    id: 13,
-    term: "Bias",
-    definition: "Systematische Verzerrungen in KI-Modellen, die zu unfairen oder diskriminierenden Entscheidungen führen können, oft aufgrund von Verzerrungen in den Trainingsdaten.",
-    category: "Ethik",
-    relatedTerms: ["Algorithmic Fairness", "Data Bias", "Demographic Parity"],
-    examples: ["Geschlechterdiskriminierung", "Rassenbias", "Sozioökonomische Vorurteile"]
-  },
-  {
-    id: 14,
-    term: "Overfitting",
-    definition: "Ein Problem beim Machine Learning, bei dem ein Modell zu spezifisch auf die Trainingsdaten angepasst ist und bei neuen, unbekannten Daten schlecht performt.",
-    category: "Training",
-    relatedTerms: ["Underfitting", "Generalization", "Regularization"],
-    examples: ["Auswendiglernen statt Verstehen", "Schlechte Testleistung", "Komplexe Modelle"]
-  },
-  {
-    id: 15,
-    term: "Reinforcement Learning",
-    definition: "Ein Machine Learning-Ansatz, bei dem ein Agent durch Interaktion mit einer Umgebung lernt, wobei er Belohnungen für gute und Bestrafungen für schlechte Aktionen erhält.",
-    category: "Technologie",
-    relatedTerms: ["Q-Learning", "Policy Gradient", "Actor-Critic"],
-    examples: ["Spiele (AlphaGo)", "Robotik", "Autonome Navigation"]
-  },
-  {
-    id: 16,
-    term: "Supervised Learning",
-    definition: "Ein Machine Learning-Ansatz, bei dem das Modell auf gelabelten Daten trainiert wird, d.h. Input-Output-Paaren, um Vorhersagen für neue Daten zu machen.",
-    category: "Training",
-    relatedTerms: ["Classification", "Regression", "Labeled Data"],
-    examples: ["E-Mail-Spam-Erkennung", "Handschrifterkennung", "Preisvorhersage"]
-  },
-  {
-    id: 17,
-    term: "Unsupervised Learning",
-    definition: "Ein Machine Learning-Ansatz, bei dem das Modell Muster und Strukturen in Daten ohne vorgegebene Labels oder Zielwerte entdeckt.",
-    category: "Training",
-    relatedTerms: ["Clustering", "Dimensionality Reduction", "Association Rules"],
-    examples: ["Kundensegmentierung", "Anomalieerkennung", "Datenvisualisierung"]
-  },
-  {
-    id: 18,
-    term: "API (Application Programming Interface)",
-    definition: "Eine Schnittstelle, die es verschiedenen Softwareanwendungen ermöglicht, miteinander zu kommunizieren und Daten auszutauschen. Im KI-Kontext oft zur Integration von KI-Services.",
-    category: "Technik",
-    relatedTerms: ["REST API", "SDK", "Web Services"],
-    examples: ["OpenAI API", "Google Cloud AI APIs", "Azure Cognitive Services"]
-  },
-  {
-    id: 19,
-    term: "Training Data",
-    definition: "Die Sammlung von Daten, die verwendet wird, um ein Machine Learning-Modell zu trainieren. Die Qualität und Quantität dieser Daten beeinflusst die Modellleistung erheblich.",
-    category: "Daten",
-    relatedTerms: ["Test Data", "Validation Data", "Data Quality"],
-    examples: ["Bilddatenbank", "Textkorpus", "Sensordaten"]
-  },
-  {
-    id: 20,
-    term: "Algorithm",
-    definition: "Eine Reihe von Regeln oder Anweisungen, die ein Computer befolgt, um ein Problem zu lösen oder eine Aufgabe zu erfüllen. In der KI sind Algorithmen das Herzstück des Lernprozesses.",
-    category: "Grundlagen",
-    relatedTerms: ["Decision Tree", "Neural Network", "Genetic Algorithm"],
-    examples: ["Linear Regression", "K-Means", "Gradient Descent"]
-  },
-  // Weitere Einträge...
-  {
-    id: 21,
-    term: "Zero-Shot Learning",
-    definition: "Die Fähigkeit eines KI-Modells, Aufgaben oder Klassen zu erkennen, die es während des Trainings nie gesehen hat, basierend auf semantischen Beschreibungen oder verwandten Beispielen.",
-    category: "Technik",
-    relatedTerms: ["Few-Shot Learning", "Transfer Learning", "Meta-Learning"],
-    examples: ["Erkennung neuer Tierarten", "Übersetzung seltener Sprachen"]
-  },
-  {
-    id: 22,
-    term: "Attention Mechanism",
-    definition: "Ein Mechanismus in neuronalen Netzwerken, der es dem Modell ermöglicht, sich auf die relevantesten Teile der Eingabe zu konzentrieren, besonders wichtig in Transformer-Modellen.",
-    category: "Architektur",
-    relatedTerms: ["Self-Attention", "Multi-Head Attention", "Transformer"],
-    examples: ["Maschinelle Übersetzung", "Text-Zusammenfassung"]
-  },
-  {
-    id: 23,
-    term: "Gradient Descent",
-    definition: "Ein Optimierungsalgorithmus, der verwendet wird, um die Parameter eines Machine Learning-Modells zu finden, die den Fehler minimieren.",
-    category: "Training",
-    relatedTerms: ["Backpropagation", "Learning Rate", "Optimizer"],
-    examples: ["Neuronale Netzwerk-Training", "Lineare Regression"]
-  },
-  {
-    id: 24,
-    term: "Explainable AI (XAI)",
-    definition: "KI-Systeme, die ihre Entscheidungsprozesse transparent und nachvollziehbar machen, sodass Menschen verstehen können, wie und warum bestimmte Entscheidungen getroffen wurden.",
-    category: "Ethik",
-    relatedTerms: ["Interpretability", "Black Box", "Model Transparency"],
-    examples: ["Medizinische Diagnose-KI", "Kreditbewertungssysteme"]
-  },
-  {
-    id: 25,
-    term: "Federated Learning",
-    definition: "Ein dezentraler Ansatz für Machine Learning, bei dem Modelle lokal auf verschiedenen Geräten trainiert werden, ohne dass Rohdaten geteilt werden müssen.",
-    category: "Technologie",
-    relatedTerms: ["Privacy-Preserving ML", "Distributed Learning", "Edge Computing"],
-    examples: ["Smartphone-Tastaturvorhersage", "Medizinische Forschung"]
-  }
+  {id:1,term:"Artificial Intelligence (KI)",definition:"Oberbegriff für Methoden und Systeme, die Aufgaben ausführen, für die Menschen typischerweise Wahrnehmung, Schlussfolgern, Lernen oder Sprache benötigen.",category:"Grundlagen",relatedTerms:["Machine Learning","Deep Learning","Generative AI"],examples:["Sprachassistenten","Empfehlungssysteme"]},
+  {id:2,term:"Artificial General Intelligence (AGI)",definition:"Hypothetische allgemeine KI mit sehr breit einsetzbaren kognitiven Fähigkeiten. Es gibt derzeit keine allgemein anerkannte AGI.",category:"Grundlagen",relatedTerms:["Artificial Intelligence","ASI","Foundation Model"]},
+  {id:3,term:"Artificial Narrow Intelligence (ANI)",definition:"KI, die auf bestimmte Aufgaben oder Aufgabenbereiche spezialisiert ist und nicht über allgemeine menschliche Fähigkeiten verfügt.",category:"Grundlagen",relatedTerms:["AI","Machine Learning"]},
+  {id:4,term:"Artificial Superintelligence (ASI)",definition:"Hypothetisches KI-Konzept für Systeme, deren allgemeine kognitive Fähigkeiten menschliche Fähigkeiten deutlich übertreffen.",category:"Grundlagen",relatedTerms:["AGI","AI Safety"]},
+  {id:5,term:"Machine Learning",definition:"Teilgebiet der KI, bei dem Modelle aus Daten Muster lernen und daraus Vorhersagen oder Entscheidungen ableiten.",category:"Machine Learning",relatedTerms:["Supervised Learning","Unsupervised Learning","Deep Learning"]},
+  {id:6,term:"Supervised Learning",definition:"Lernverfahren mit gelabelten Beispieldaten, bei denen Eingaben mit bekannten Zielwerten verbunden sind.",category:"Machine Learning",relatedTerms:["Classification","Regression","Training Data"]},
+  {id:7,term:"Unsupervised Learning",definition:"Lernverfahren, bei dem Modelle Strukturen oder Muster in Daten ohne vorgegebene Zielwerte entdecken.",category:"Machine Learning",relatedTerms:["Clustering","Dimensionality Reduction"]},
+  {id:8,term:"Self-Supervised Learning",definition:"Lernverfahren, bei dem Trainingssignale aus den Daten selbst erzeugt werden, etwa durch das Vorhersagen ausgeblendeter oder nächster Tokens.",category:"Machine Learning",relatedTerms:["Pre-training","LLM","Contrastive Learning"]},
+  {id:9,term:"Reinforcement Learning",definition:"Lernverfahren, bei dem ein Agent durch Interaktion mit einer Umgebung Handlungen auswählt und anhand von Belohnungen lernt.",category:"Machine Learning",relatedTerms:["Reward","Policy","Q-Learning"]},
+  {id:10,term:"Deep Learning",definition:"Machine Learning mit mehrschichtigen neuronalen Netzen, die komplexe Repräsentationen direkt aus Daten lernen können.",category:"Machine Learning",relatedTerms:["Neural Network","Transformer","CNN"]},
+  {id:11,term:"Classification",definition:"Aufgabe, Eingaben einer oder mehreren vordefinierten Klassen zuzuordnen.",category:"Machine Learning",relatedTerms:["Supervised Learning","Label","Inference"],examples:["Spam-Erkennung","Bildklassifikation"]},
+  {id:12,term:"Regression",definition:"Vorhersage eines kontinuierlichen numerischen Zielwerts anhand von Eingabedaten.",category:"Machine Learning",relatedTerms:["Supervised Learning","Loss Function"],examples:["Preisprognose","Nachfrageprognose"]},
+  {id:13,term:"Clustering",definition:"Gruppierung ähnlicher Datenpunkte ohne vorher festgelegte Klassen.",category:"Machine Learning",relatedTerms:["Unsupervised Learning","K-Means"]},
+  {id:14,term:"Feature",definition:"Messbare oder abgeleitete Eigenschaft eines Datenpunkts, die ein Modell als Eingabe verwenden kann.",category:"Daten",relatedTerms:["Feature Engineering","Training Data"]},
+  {id:15,term:"Feature Engineering",definition:"Auswahl, Transformation oder Konstruktion sinnvoller Eingabemerkmale für ein Machine-Learning-Modell.",category:"Daten",relatedTerms:["Feature","Data Preprocessing"]},
+  {id:16,term:"Training Data",definition:"Daten, mit denen Modellparameter während des Trainings angepasst werden.",category:"Daten",relatedTerms:["Validation Data","Test Data","Dataset"]},
+  {id:17,term:"Validation Data",definition:"Separater Datensatz zur Abstimmung von Hyperparametern und zur Modellwahl während der Entwicklung.",category:"Daten",relatedTerms:["Training Data","Test Data"]},
+  {id:18,term:"Test Data",definition:"Daten, die erst nach der Modell- und Hyperparameterwahl zur unabhängigen Bewertung verwendet werden.",category:"Daten",relatedTerms:["Validation Data","Evaluation"]},
+  {id:19,term:"Data Augmentation",definition:"Erzeugung zusätzlicher Trainingsvarianten durch sinnvolle Transformationen oder Erweiterungen vorhandener Daten.",category:"Daten",relatedTerms:["Training Data","Generalization"]},
+  {id:20,term:"Synthetic Data",definition:"Künstlich erzeugte Daten, die Eigenschaften realer Daten nachbilden und für Training, Tests oder Simulationen eingesetzt werden können.",category:"Daten",relatedTerms:["Data Augmentation","Generative AI"]},
+  {id:21,term:"Neural Network",definition:"Parametrisiertes Modell aus miteinander verbundenen Einheiten, das Eingaben schrittweise in Ausgaben transformiert.",category:"Architektur",relatedTerms:["Neuron","Layer","Activation Function"]},
+  {id:22,term:"Perceptron",definition:"Einfaches künstliches Neuron beziehungsweise lineares Klassifikationsmodell und historischer Baustein neuronaler Netze.",category:"Architektur",relatedTerms:["Neuron","Activation Function"]},
+  {id:23,term:"Neuron",definition:"Recheneinheit eines neuronalen Netzes, die gewichtete Eingaben kombiniert und über eine Aktivierungsfunktion weitergibt.",category:"Architektur",relatedTerms:["Perceptron","Layer"]},
+  {id:24,term:"Layer",definition:"Schicht eines neuronalen Netzes, die Eingaben verarbeitet und an die nächste Schicht weitergibt.",category:"Architektur",relatedTerms:["Hidden Layer","Neural Network"]},
+  {id:25,term:"Hidden Layer",definition:"Interne Schicht eines neuronalen Netzes zwischen Eingabe und Ausgabe.",category:"Architektur",relatedTerms:["Layer","Deep Learning"]},
+  {id:26,term:"Activation Function",definition:"Nichtlineare Funktion innerhalb eines neuronalen Netzes, die bestimmt, wie ein Neuron seine Eingabe weitergibt.",category:"Architektur",relatedTerms:["ReLU","Sigmoid","GELU"]},
+  {id:27,term:"ReLU",definition:"Aktivierungsfunktion max(0,x), die wegen ihrer Einfachheit häufig in neuronalen Netzen eingesetzt wird.",category:"Architektur",relatedTerms:["Activation Function","Neural Network"]},
+  {id:28,term:"Convolutional Neural Network (CNN)",definition:"Neuronale Netzwerkarchitektur, die besonders für räumliche Muster in Bildern und anderen strukturierten Signalen geeignet ist.",category:"Architektur",relatedTerms:["Computer Vision","Convolution"]},
+  {id:29,term:"Recurrent Neural Network (RNN)",definition:"Neuronales Netz, das Sequenzen über Zustände verarbeitet und damit zeitliche oder sequenzielle Abhängigkeiten modellieren kann.",category:"Architektur",relatedTerms:["LSTM","GRU","Sequence"]},
+  {id:30,term:"LSTM",definition:"Variante rekurrenter neuronaler Netze mit Speichermechanismen zur Verarbeitung längerfristiger Abhängigkeiten in Sequenzen.",category:"Architektur",relatedTerms:["RNN","GRU"]},
+  {id:31,term:"Transformer",definition:"Architektur, die insbesondere Attention verwendet und zur Grundlage vieler moderner Sprach- und multimodaler Modelle wurde.",category:"Architektur",relatedTerms:["Attention","Self-Attention","LLM"]},
+  {id:32,term:"Attention Mechanism",definition:"Mechanismus, mit dem ein Modell unterschiedliche Teile einer Eingabe abhängig von ihrer Relevanz gewichten kann.",category:"Architektur",relatedTerms:["Self-Attention","Transformer"]},
+  {id:33,term:"Self-Attention",definition:"Attention, bei der Positionen innerhalb derselben Sequenz miteinander in Beziehung gesetzt werden.",category:"Architektur",relatedTerms:["Attention","Transformer","Token"]},
+  {id:34,term:"Multi-Head Attention",definition:"Parallele Attention-Köpfe, die unterschiedliche Beziehungen und Repräsentationen innerhalb einer Sequenz erfassen können.",category:"Architektur",relatedTerms:["Self-Attention","Transformer"]},
+  {id:35,term:"Positional Encoding",definition:"Information, die einem Transformer die Position oder Reihenfolge von Tokens innerhalb einer Sequenz vermittelt.",category:"Architektur",relatedTerms:["Transformer","Token"]},
+  {id:36,term:"Encoder",definition:"Modellkomponente, die Eingabedaten in eine interne Repräsentation überführt.",category:"Architektur",relatedTerms:["Transformer","Encoder-Decoder"]},
+  {id:37,term:"Decoder",definition:"Modellkomponente, die aus internen Repräsentationen Ausgaben erzeugt, beispielsweise Text.",category:"Architektur",relatedTerms:["Transformer","Encoder-Decoder"]},
+  {id:38,term:"Encoder-Decoder",definition:"Architektur, bei der ein Encoder eine Eingabe repräsentiert und ein Decoder daraus eine Ausgabe erzeugt.",category:"Architektur",relatedTerms:["Encoder","Decoder","Transformer"]},
+  {id:39,term:"Large Language Model (LLM)",definition:"Großes Sprachmodell, das auf umfangreichen Daten trainiert wird und sprachbezogene Aufgaben wie Generieren, Zusammenfassen oder Übersetzen ausführen kann.",category:"LLM",relatedTerms:["Transformer","Token","Foundation Model"],examples:["GPT","Claude","Gemini","Llama"]},
+  {id:40,term:"Small Language Model (SLM)",definition:"Kompakteres Sprachmodell, das weniger Ressourcen benötigt und für bestimmte Aufgaben oder lokale Anwendungen geeignet sein kann.",category:"LLM",relatedTerms:["LLM","Edge AI","Quantization"]},
+  {id:41,term:"Foundation Model",definition:"Breit vortrainiertes Modell, das als Grundlage für viele nachgelagerte Aufgaben und Anwendungen dienen kann.",category:"Modelle",relatedTerms:["LLM","Multimodal Model","Fine-tuning"]},
+  {id:42,term:"Multimodal Model",definition:"KI-Modell, das mehrere Modalitäten wie Text, Bild, Audio oder Video verarbeiten oder erzeugen kann.",category:"Modelle",relatedTerms:["VLM","Generative AI","LLM"]},
+  {id:43,term:"Vision-Language Model (VLM)",definition:"Multimodales Modell, das visuelle Informationen und Sprache gemeinsam verarbeitet.",category:"Modelle",relatedTerms:["Multimodal Model","Computer Vision","LLM"]},
+  {id:44,term:"Token",definition:"Verarbeitungseinheit eines Sprachmodells. Ein Token kann einem Wortteil, Wort, Zeichen oder einer anderen Textrepräsentation entsprechen.",category:"LLM",relatedTerms:["Tokenizer","Context Window"]},
+  {id:45,term:"Tokenizer",definition:"Komponente, die Text in die Token-Einheiten umwandelt, die ein Sprachmodell verarbeitet.",category:"LLM",relatedTerms:["Token","Vocabulary"]},
+  {id:46,term:"Vocabulary",definition:"Menge der Token, die ein Tokenizer beziehungsweise Sprachmodell unterscheiden kann.",category:"LLM",relatedTerms:["Token","Tokenizer"]},
+  {id:47,term:"Context Window",definition:"Maximale Menge an Token, die ein Modell in einem Verarbeitungskontext berücksichtigen kann.",category:"LLM",relatedTerms:["Token","Attention","Long Context"]},
+  {id:48,term:"Embedding",definition:"Dichte numerische Repräsentation von Text, Bildern oder anderen Daten, die semantische Ähnlichkeiten abbilden kann.",category:"LLM",relatedTerms:["Vector Database","Semantic Search","RAG"]},
+  {id:49,term:"Vector Database",definition:"Datenbank zur Speicherung und Ähnlichkeitssuche in Vektorrepräsentationen wie Embeddings.",category:"LLM",relatedTerms:["Embedding","RAG","Semantic Search"],examples:["pgvector","Qdrant","Milvus"]},
+  {id:50,term:"Semantic Search",definition:"Suche nach Bedeutung und Ähnlichkeit statt ausschließlich nach exakten Schlüsselwörtern.",category:"LLM",relatedTerms:["Embedding","Vector Database","RAG"]},
+  {id:51,term:"Retrieval-Augmented Generation (RAG)",definition:"Methode, bei der ein Modell vor der Antwort relevante externe Informationen abruft und diese in den Generierungskontext einbezieht.",category:"LLM",relatedTerms:["Embedding","Vector Database","Grounding"],examples:["Dokumenten-Chat","Unternehmenswissen"]},
+  {id:52,term:"Grounding",definition:"Verankerung einer KI-Antwort in überprüfbaren Daten, Quellen oder bereitgestelltem Kontext.",category:"LLM",relatedTerms:["RAG","Hallucination","Citation"]},
+  {id:53,term:"Long Context",definition:"Fähigkeit eines Modells, besonders große Mengen an Kontext innerhalb einer Anfrage zu verarbeiten.",category:"LLM",relatedTerms:["Context Window","Attention"]},
+  {id:54,term:"Generative AI",definition:"KI, die neue Inhalte wie Text, Bilder, Audio, Code oder Video erzeugen kann.",category:"Generative AI",relatedTerms:["LLM","Diffusion Model","Multimodal Model"]},
+  {id:55,term:"Diffusion Model",definition:"Generatives Modell, das Daten typischerweise aus einem verrauschten Zustand schrittweise in eine strukturierte Ausgabe überführt.",category:"Generative AI",relatedTerms:["Image Generation","Stable Diffusion","Generative AI"]},
+  {id:56,term:"Generative Adversarial Network (GAN)",definition:"Generatives Verfahren mit Generator und Diskriminator, die gegeneinander trainiert werden.",category:"Generative AI",relatedTerms:["Generator","Discriminator","Synthetic Data"]},
+  {id:57,term:"Variational Autoencoder (VAE)",definition:"Generatives Modell, das Daten in einen probabilistischen latenten Raum abbildet und daraus neue Daten erzeugen kann.",category:"Generative AI",relatedTerms:["Latent Space","Generative Model"]},
+  {id:58,term:"Image Generation",definition:"Erzeugung neuer Bilder durch KI-Modelle aus Text, Bildern oder anderen Eingaben.",category:"Generative AI",relatedTerms:["Diffusion Model","Text-to-Image"],examples:["Stable Diffusion","Imagen"]},
+  {id:59,term:"Text-to-Image",definition:"Generierung eines Bildes aus einer natürlichen Sprachbeschreibung.",category:"Generative AI",relatedTerms:["Image Generation","Prompt"]},
+  {id:60,term:"Text-to-Video",definition:"Erzeugung oder Synthese von Videoinhalten aus Textbeschreibungen.",category:"Generative AI",relatedTerms:["Generative AI","Video Generation"]},
+  {id:61,term:"Text-to-Speech (TTS)",definition:"Umwandlung von geschriebenem Text in künstlich erzeugte Sprache.",category:"Audio & Sprache",relatedTerms:["Speech Synthesis","Voice AI"]},
+  {id:62,term:"Speech-to-Text (STT)",definition:"Automatische Umwandlung gesprochener Sprache in Text.",category:"Audio & Sprache",relatedTerms:["ASR","Voice AI"]},
+  {id:63,term:"Automatic Speech Recognition (ASR)",definition:"Technologie zur automatischen Erkennung und Transkription gesprochener Sprache.",category:"Audio & Sprache",relatedTerms:["STT","Speech Recognition"]},
+  {id:64,term:"Voice AI",definition:"KI-Anwendungen, die Sprache verstehen, erzeugen oder dialogorientiert verarbeiten.",category:"Audio & Sprache",relatedTerms:["TTS","STT","Voice Assistant"]},
+  {id:65,term:"Computer Vision",definition:"Teilgebiet der KI zur Analyse und Interpretation visueller Informationen aus Bildern und Videos.",category:"Computer Vision",relatedTerms:["CNN","Object Detection","OCR"]},
+  {id:66,term:"Object Detection",definition:"Erkennung und Lokalisierung von Objekten innerhalb eines Bildes oder Videoframes.",category:"Computer Vision",relatedTerms:["Computer Vision","Image Classification"]},
+  {id:67,term:"Image Segmentation",definition:"Aufteilung eines Bildes in Pixelbereiche, die bestimmten Objekten oder Klassen zugeordnet werden.",category:"Computer Vision",relatedTerms:["Computer Vision","Object Detection"]},
+  {id:68,term:"OCR",definition:"Optical Character Recognition; Erkennung und Extraktion von Text aus Bildern oder gescannten Dokumenten.",category:"Computer Vision",relatedTerms:["Computer Vision","Document AI"]},
+  {id:69,term:"Natural Language Processing (NLP)",definition:"Bereich der KI zur Verarbeitung, Analyse und Erzeugung menschlicher Sprache.",category:"Sprache",relatedTerms:["NLU","NLG","LLM"]},
+  {id:70,term:"Natural Language Understanding (NLU)",definition:"Verarbeitung natürlicher Sprache mit dem Ziel, Bedeutung, Absichten und Zusammenhänge zu erkennen.",category:"Sprache",relatedTerms:["NLP","Intent Recognition"]},
+  {id:71,term:"Natural Language Generation (NLG)",definition:"Automatische Erzeugung natürlichsprachlicher Texte aus Daten, Strukturen oder Modellausgaben.",category:"Sprache",relatedTerms:["NLP","LLM"]},
+  {id:72,term:"Sentiment Analysis",definition:"Analyse von Texten hinsichtlich Einstellungen, Emotionen oder Stimmungen.",category:"Sprache",relatedTerms:["NLP","Classification"]},
+  {id:73,term:"Prompt",definition:"Eingabe oder Anweisung, mit der ein generatives KI-Modell zu einer bestimmten Ausgabe geführt wird.",category:"Prompting",relatedTerms:["System Prompt","Prompt Engineering"]},
+  {id:74,term:"Prompt Engineering",definition:"Systematische Gestaltung von Eingaben, Kontext und Anweisungen, um zuverlässigere Modellausgaben zu erhalten.",category:"Prompting",relatedTerms:["Prompt","Few-Shot Learning","Structured Output"]},
+  {id:75,term:"System Prompt",definition:"Anweisungen mit hoher Priorität, die Verhalten, Rolle oder Regeln eines KI-Systems innerhalb eines Kontexts festlegen.",category:"Prompting",relatedTerms:["Prompt","Instruction"]},
+  {id:76,term:"Zero-Shot Learning",definition:"Bearbeitung einer Aufgabe ohne explizite Beispiele für genau diese Aufgabe im Prompt oder Training.",category:"Prompting",relatedTerms:["Few-Shot Learning","Transfer Learning"]},
+  {id:77,term:"Few-Shot Learning",definition:"Steuerung eines Modells durch wenige Beispiele, die im Kontext einer Anfrage bereitgestellt werden.",category:"Prompting",relatedTerms:["Zero-Shot Learning","In-Context Learning"]},
+  {id:78,term:"In-Context Learning",definition:"Anpassung des Modellverhaltens an Beispiele oder Anweisungen innerhalb des aktuellen Kontextes ohne Aktualisierung der Modellparameter.",category:"Prompting",relatedTerms:["Few-Shot Learning","Context Window"]},
+  {id:79,term:"Structured Output",definition:"Modellausgabe in einem vorgegebenen Format, etwa JSON oder ein Schema, damit Software sie zuverlässig weiterverarbeiten kann.",category:"Prompting",relatedTerms:["JSON Schema","Function Calling"]},
+  {id:80,term:"Chain-of-Thought",definition:"Begriff für schrittweises internes oder explizites Schlussfolgern eines Modells. Anwendungen sollten nicht davon ausgehen, dass eine sichtbare Begründung die tatsächliche interne Berechnung vollständig abbildet.",category:"Prompting",relatedTerms:["Reasoning","Prompt Engineering"]},
+  {id:81,term:"Fine-tuning",definition:"Weitertraining eines vortrainierten Modells auf spezialisierten Daten, um Verhalten oder Leistung für einen bestimmten Anwendungsfall anzupassen.",category:"Training",relatedTerms:["Transfer Learning","LoRA","PEFT"]},
+  {id:82,term:"Transfer Learning",definition:"Übertragung von Wissen oder Repräsentationen eines bereits trainierten Modells auf eine neue Aufgabe oder Domäne.",category:"Training",relatedTerms:["Fine-tuning","Foundation Model"]},
+  {id:83,term:"LoRA",definition:"Low-Rank Adaptation; Verfahren zur ressourcenschonenden Anpassung großer Modelle durch trainierbare Low-Rank-Parameter.",category:"Training",relatedTerms:["PEFT","Fine-tuning","Quantization"]},
+  {id:84,term:"PEFT",definition:"Parameter-Efficient Fine-Tuning; Sammelbegriff für Verfahren, die nur einen kleinen Teil zusätzlicher oder bestehender Parameter trainieren.",category:"Training",relatedTerms:["LoRA","Fine-tuning"]},
+  {id:85,term:"Pre-training",definition:"Großes Vortraining eines Modells auf allgemeinen Daten, bevor es für konkrete Aufgaben angepasst oder eingesetzt wird.",category:"Training",relatedTerms:["Foundation Model","Self-Supervised Learning"]},
+  {id:86,term:"Epoch",definition:"Ein vollständiger Durchlauf des Trainingsdatensatzes durch das Modell.",category:"Training",relatedTerms:["Batch","Training"]},
+  {id:87,term:"Batch",definition:"Teilmenge von Trainingsdaten, die gemeinsam für einen Optimierungsschritt verarbeitet wird.",category:"Training",relatedTerms:["Batch Size","Epoch"]},
+  {id:88,term:"Loss Function",definition:"Funktion, die misst, wie stark die Modellvorhersage von einem Zielwert abweicht und als Trainingssignal dient.",category:"Training",relatedTerms:["Gradient Descent","Optimization"]},
+  {id:89,term:"Gradient Descent",definition:"Optimierungsverfahren, das Parameter in Richtung eines kleineren Verlustwertes verändert.",category:"Training",relatedTerms:["Loss Function","Backpropagation","Learning Rate"]},
+  {id:90,term:"Backpropagation",definition:"Verfahren zur Berechnung von Gradienten in neuronalen Netzen durch Rückwärtspropagation des Fehlers.",category:"Training",relatedTerms:["Gradient Descent","Neural Network"]},
+  {id:91,term:"Learning Rate",definition:"Hyperparameter, der die Größe der Parameteränderung während eines Optimierungsschritts beeinflusst.",category:"Training",relatedTerms:["Gradient Descent","Optimizer"]},
+  {id:92,term:"Optimizer",definition:"Verfahren zur Aktualisierung von Modellparametern anhand berechneter Gradienten.",category:"Training",relatedTerms:["Adam","Gradient Descent","Learning Rate"]},
+  {id:93,term:"Overfitting",definition:"Ein Modell passt sich zu stark an Trainingsdaten an und generalisiert deshalb schlecht auf neue Daten.",category:"Training",relatedTerms:["Underfitting","Regularization"]},
+  {id:94,term:"Underfitting",definition:"Ein Modell ist zu einfach oder zu wenig trainiert, um die relevanten Muster der Daten ausreichend abzubilden.",category:"Training",relatedTerms:["Overfitting","Model Capacity"]},
+  {id:95,term:"Regularization",definition:"Methoden, die Überanpassung reduzieren sollen, indem die Modellkomplexität oder Parameter eingeschränkt werden.",category:"Training",relatedTerms:["Dropout","Overfitting"]},
+  {id:96,term:"Dropout",definition:"Regularisierungsmethode, bei der während des Trainings zufällig bestimmte Aktivierungen deaktiviert werden.",category:"Training",relatedTerms:["Regularization","Neural Network"]},
+  {id:97,term:"Inference",definition:"Ausführung eines trainierten Modells zur Erzeugung einer Vorhersage oder Ausgabe für neue Eingaben.",category:"Technik",relatedTerms:["Training","Model Serving"]},
+  {id:98,term:"Temperature",definition:"Sampling-Parameter, der bei vielen generativen Modellen die Zufälligkeit beziehungsweise Verteilung der nächsten Ausgabe beeinflusst.",category:"Technik",relatedTerms:["Sampling","Top-p","Inference"]},
+  {id:99,term:"Top-p Sampling",definition:"Sampling-Verfahren, bei dem nur die kleinste Menge wahrscheinlichster Tokens berücksichtigt wird, deren kumulierte Wahrscheinlichkeit einen Grenzwert erreicht.",category:"Technik",relatedTerms:["Temperature","Sampling"]},
+  {id:100,term:"Top-k Sampling",definition:"Sampling-Verfahren, bei dem nur die k wahrscheinlichsten nächsten Tokens für die Auswahl berücksichtigt werden.",category:"Technik",relatedTerms:["Temperature","Sampling"]},
+  {id:101,term:"Hallucination",definition:"Falsche, erfundene oder nicht ausreichend belegte Ausgabe eines KI-Systems, die dennoch plausibel wirken kann.",category:"Sicherheit & Qualität",relatedTerms:["Grounding","RAG","Evaluation"]},
+  {id:102,term:"AI Bias",definition:"Systematische Verzerrung in Daten, Modellen oder Entscheidungsprozessen, die zu unfairen oder unzuverlässigen Ergebnissen führen kann.",category:"Ethik & Governance",relatedTerms:["Fairness","Training Data"]},
+  {id:103,term:"Explainable AI (XAI)",definition:"Methoden und Systeme, die nachvollziehbar machen sollen, wie ein Modell zu einer Ausgabe oder Entscheidung gelangt.",category:"Ethik & Governance",relatedTerms:["Interpretability","Transparency"]},
+  {id:104,term:"AI Safety",definition:"Forschungs- und Praxisbereich zur sicheren, robusten und kontrollierbaren Entwicklung und Nutzung von KI-Systemen.",category:"Ethik & Governance",relatedTerms:["Alignment","Guardrails","AI Governance"]},
+  {id:105,term:"AI Alignment",definition:"Ausrichtung des Verhaltens eines KI-Systems an menschlichen Zielen, Anforderungen und Sicherheitsvorgaben.",category:"Ethik & Governance",relatedTerms:["RLHF","AI Safety","Guardrails"]},
+  {id:106,term:"RLHF",definition:"Reinforcement Learning from Human Feedback; Anpassung eines Modells anhand menschlicher Bewertungen oder Präferenzen.",category:"Training",relatedTerms:["Alignment","Preference Optimization"]},
+  {id:107,term:"DPO",definition:"Direct Preference Optimization; Verfahren zur Optimierung eines Modells anhand bevorzugter und weniger bevorzugter Antwortpaare.",category:"Training",relatedTerms:["RLHF","Alignment"]},
+  {id:108,term:"Guardrails",definition:"Technische oder organisatorische Regeln, Filter und Prüfungen, die unerwünschte oder riskante Modellnutzung begrenzen.",category:"Sicherheit & Qualität",relatedTerms:["AI Safety","Content Moderation"]},
+  {id:109,term:"Red Teaming",definition:"Gezieltes Testen eines KI-Systems auf Schwachstellen, Fehlverhalten, Missbrauchsmöglichkeiten und Sicherheitsrisiken.",category:"Sicherheit & Qualität",relatedTerms:["AI Safety","Adversarial Attack"]},
+  {id:110,term:"Adversarial Example",definition:"Gezielt veränderte Eingabe, die ein Modell zu einer falschen oder unerwarteten Ausgabe bringen soll.",category:"Sicherheit & Qualität",relatedTerms:["Adversarial Attack","Robustness"]},
+  {id:111,term:"Data Poisoning",definition:"Manipulation von Trainingsdaten mit dem Ziel, Verhalten, Leistung oder Sicherheitsmerkmale eines Modells zu beeinflussen.",category:"Sicherheit & Qualität",relatedTerms:["Training Data","AI Security"]},
+  {id:112,term:"Model Evaluation",definition:"Systematische Messung von Qualität, Zuverlässigkeit, Sicherheit und Eignung eines KI-Modells für definierte Aufgaben.",category:"Sicherheit & Qualität",relatedTerms:["Benchmark","Test Data","Metrics"]},
+  {id:113,term:"Benchmark",definition:"Standardisierte Aufgabe oder Datensammlung zur vergleichbaren Bewertung von Modellen.",category:"Sicherheit & Qualität",relatedTerms:["Evaluation","Metric"]},
+  {id:114,term:"Model Card",definition:"Dokumentation eines Modells mit Informationen über Zweck, Fähigkeiten, Einschränkungen, Evaluation und mögliche Risiken.",category:"Ethik & Governance",relatedTerms:["AI Governance","Model Evaluation"]},
+  {id:115,term:"AI Agent",definition:"Software-System, das ein KI-Modell mit Zuständen, Werkzeugen und Aktionen kombiniert, um mehrstufige Aufgaben auszuführen.",category:"Agenten",relatedTerms:["Tool Calling","Planning","Workflow"]},
+  {id:116,term:"Tool Calling",definition:"Funktion, mit der ein Modell strukturierte Aufrufe externer Werkzeuge oder Funktionen anfordern kann.",category:"Agenten",relatedTerms:["Function Calling","AI Agent","API"]},
+  {id:117,term:"Function Calling",definition:"Schnittstelle, über die ein Modell Funktionsparameter strukturiert erzeugt, damit eine Anwendung eine definierte Funktion ausführen kann.",category:"Agenten",relatedTerms:["Tool Calling","Structured Output","API"]},
+  {id:118,term:"AI Workflow",definition:"Definierter Ablauf, in dem KI-Modelle, Datenquellen, Tools und menschliche Schritte kombiniert werden.",category:"Agenten",relatedTerms:["AI Agent","Automation","Orchestration"]},
+  {id:119,term:"Model Context Protocol (MCP)",definition:"Offenes Protokoll zur standardisierten Verbindung von KI-Anwendungen mit Tools, Datenquellen und Kontext.",category:"Agenten",relatedTerms:["Tool Calling","AI Agent","Context"]},
+  {id:120,term:"Orchestration",definition:"Koordination mehrerer Modelle, Tools, Agenten oder Verarbeitungsschritte zu einem zusammenhängenden System.",category:"Agenten",relatedTerms:["Workflow","AI Agent"]},
+  {id:121,term:"API",definition:"Application Programming Interface; definierte Schnittstelle, über die Software Funktionen oder Daten anderer Software nutzen kann.",category:"Infrastruktur",relatedTerms:["REST API","SDK","Endpoint"]},
+  {id:122,term:"REST API",definition:"Web-Schnittstellenstil, der Ressourcen typischerweise über HTTP-Methoden und URLs zugänglich macht.",category:"Infrastruktur",relatedTerms:["API","HTTP","JSON"]},
+  {id:123,term:"SDK",definition:"Software Development Kit mit Bibliotheken, Werkzeugen und Hilfsmitteln für die Entwicklung gegen eine Plattform oder API.",category:"Infrastruktur",relatedTerms:["API","Library"]},
+  {id:124,term:"Inference Endpoint",definition:"Dienst oder URL, über den ein trainiertes Modell Anfragen entgegennimmt und Modellresultate zurückgibt.",category:"Infrastruktur",relatedTerms:["Inference","API","Model Serving"]},
+  {id:125,term:"Model Serving",definition:"Bereitstellung eines trainierten Modells als nutzbarer Dienst für Anwendungen oder Benutzer.",category:"Infrastruktur",relatedTerms:["Inference Endpoint","Deployment"]},
+  {id:126,term:"Quantization",definition:"Reduzierung der numerischen Präzision von Modellparametern, um Speicherbedarf und Rechenaufwand zu senken.",category:"Infrastruktur",relatedTerms:["GGUF","Inference","Edge AI"]},
+  {id:127,term:"GGUF",definition:"Dateiformat, das unter anderem für lokal ausgeführte quantisierte Sprachmodelle im llama.cpp-Ökosystem verbreitet ist.",category:"Infrastruktur",relatedTerms:["Quantization","Local AI"]},
+  {id:128,term:"GPU",definition:"Grafikprozessor mit hoher Parallelität, der sich besonders für viele KI- und Matrixberechnungen eignet.",category:"Infrastruktur",relatedTerms:["CUDA","Inference","Training"]},
+  {id:129,term:"NPU",definition:"Neural Processing Unit; spezialisierter Prozessor für KI- und Machine-Learning-Berechnungen, häufig in modernen Endgeräten.",category:"Infrastruktur",relatedTerms:["Edge AI","GPU"]},
+  {id:130,term:"CUDA",definition:"NVIDIA-Plattform und Programmierschnittstelle zur Ausführung allgemeiner Berechnungen auf kompatiblen GPUs.",category:"Infrastruktur",relatedTerms:["GPU","Deep Learning"]},
+  {id:131,term:"Edge AI",definition:"Ausführung von KI-Modellen direkt auf Geräten oder nahe an der Datenquelle statt ausschließlich in der Cloud.",category:"Infrastruktur",relatedTerms:["NPU","Local AI","Federated Learning"]},
+  {id:132,term:"Local AI",definition:"Ausführung von KI-Modellen auf eigener Hardware, wodurch Anwendungen teilweise ohne externe KI-Cloud betrieben werden können.",category:"Infrastruktur",relatedTerms:["Edge AI","GGUF","Privacy"]},
+  {id:133,term:"Federated Learning",definition:"Verteiltes Training, bei dem Daten möglichst auf ihren Geräten verbleiben und stattdessen Modellaktualisierungen ausgetauscht werden.",category:"Sicherheit & Qualität",relatedTerms:["Privacy-Preserving ML","Edge AI"]},
+  {id:134,term:"Differential Privacy",definition:"Formales Datenschutzverfahren, das den Einfluss einzelner Datensätze auf statistische oder lernende Ergebnisse begrenzt.",category:"Sicherheit & Qualität",relatedTerms:["Privacy","Federated Learning"]},
+  {id:135,term:"MLOps",definition:"Methoden und Werkzeuge für Entwicklung, Deployment, Überwachung und Wartung von Machine-Learning-Systemen.",category:"Infrastruktur",relatedTerms:["Model Serving","Evaluation","Monitoring"]},
+  {id:136,term:"Model Distillation",definition:"Training eines kleineren Student-Modells anhand von Wissen oder Ausgaben eines größeren Teacher-Modells.",category:"Training",relatedTerms:["Compression","Small Language Model"]},
+  {id:137,term:"Open Source AI",definition:"KI-Software, deren Quellcode unter einer entsprechenden Open-Source-Lizenz verfügbar ist. Modellgewichte, Daten und Lizenzbedingungen können davon unabhängig sein.",category:"Governance",relatedTerms:["Open Weights","License"]},
+  {id:138,term:"Open Weights",definition:"Modell, dessen trainierte Gewichte öffentlich verfügbar sind. Das bedeutet nicht automatisch, dass Code, Trainingsdaten oder Nutzung ohne Einschränkungen frei sind.",category:"Governance",relatedTerms:["Open Source AI","Model Card"]},
+  {id:139,term:"AI Governance",definition:"Regeln, Prozesse und Verantwortlichkeiten für die sichere, rechtmäßige und verantwortungsvolle Entwicklung und Nutzung von KI.",category:"Ethik & Governance",relatedTerms:["AI Safety","Compliance","Risk Management"]},
+  {id:140,term:"AI Ethics",definition:"Ethische Prinzipien und Fragestellungen rund um Fairness, Transparenz, Verantwortung, Datenschutz und gesellschaftliche Auswirkungen von KI.",category:"Ethik & Governance",relatedTerms:["Bias","AI Governance","Fairness"]},
+  {id:141,term:"GDPR / DSGVO",definition:"Europäische Datenschutz-Grundverordnung mit Regeln zur Verarbeitung personenbezogener Daten und zu den Rechten betroffener Personen.",category:"Governance",relatedTerms:["Privacy","Data Protection","AI Governance"]},
+  {id:142,term:"Deepfake",definition:"Synthetische oder manipulierte Medieninhalte, die mithilfe von KI erstellt oder verändert wurden und häufig den Anschein echter Personen oder Ereignisse erzeugen.",category:"Ethik & Governance",relatedTerms:["Generative AI","Image Generation","Voice AI"]},
+  {id:143,term:"Watermarking",definition:"Einfügen eines sichtbaren oder unsichtbaren Signals in Inhalte, um deren Herkunft, Verarbeitung oder Kennzeichnung zu unterstützen.",category:"Ethik & Governance",relatedTerms:["Provenance","Deepfake","Generative AI"]},
+  {id:144,term:"AI Literacy",definition:"Fähigkeit, KI-Systeme zu verstehen, sinnvoll zu nutzen, ihre Grenzen zu erkennen und Ergebnisse kritisch zu bewerten.",category:"Grundlagen",relatedTerms:["AI Ethics","Prompt Engineering","Evaluation"]},
+  {id:145,term:"AI Automation",definition:"Automatisierung von Aufgaben oder Geschäftsprozessen durch KI-basierte Wahrnehmung, Entscheidung, Generierung oder Agenten.",category:"Anwendungen",relatedTerms:["AI Agent","Workflow","RPA"]},
+  {id:146,term:"Recommendation System",definition:"System, das Benutzern Inhalte, Produkte oder Aktionen anhand von Daten und vorhergesagten Interessen empfiehlt.",category:"Anwendungen",relatedTerms:["Machine Learning","Ranking","Personalization"]},
+  {id:147,term:"Document AI",definition:"KI-Technologien zur Verarbeitung strukturierter und unstrukturierter Dokumente, einschließlich OCR, Klassifikation und Informationsextraktion.",category:"Anwendungen",relatedTerms:["OCR","NLP","RAG"]},
+  {id:148,term:"AI Coding Assistant",definition:"KI-Werkzeug, das Softwareentwicklung durch Codegenerierung, Erklärung, Vervollständigung, Refactoring oder Fehlersuche unterstützt.",category:"Anwendungen",relatedTerms:["LLM","Code Generation","Agent"]},
+  {id:149,term:"Code Generation",definition:"Automatische Erzeugung von Quellcode durch KI aus natürlicher Sprache, Beispielen oder strukturierten Anforderungen.",category:"Anwendungen",relatedTerms:["LLM","AI Coding Assistant"]},
+  {id:150,term:"Prompt Injection",definition:"Angriffs- oder Manipulationstechnik, bei der eingeschleuste Anweisungen das Verhalten eines KI-Systems oder eines Agenten beeinflussen sollen.",category:"Sicherheit & Qualität",relatedTerms:["AI Security","RAG","Agent Security"]},
+  {id:151,term:"Jailbreak",definition:"Versuch, Sicherheits- oder Verhaltensbeschränkungen eines KI-Systems durch speziell formulierte Eingaben zu umgehen.",category:"Sicherheit & Qualität",relatedTerms:["Prompt Injection","Guardrails"]},
+  {id:152,term:"Model Robustness",definition:"Fähigkeit eines Modells, trotz Rauschen, veränderten Eingaben oder anderen Störungen zuverlässig zu funktionieren.",category:"Sicherheit & Qualität",relatedTerms:["Adversarial Example","Evaluation"]},
+  {id:153,term:"Latency",definition:"Zeit zwischen einer Anfrage und dem Eintreffen der relevanten Antwort oder des Ergebnisses eines KI-Systems.",category:"Technik",relatedTerms:["Inference","Throughput"]},
+  {id:154,term:"Throughput",definition:"Menge an Anfragen, Tokens oder Daten, die ein KI-System pro Zeiteinheit verarbeiten kann.",category:"Technik",relatedTerms:["Latency","Inference"]},
+  {id:155,term:"Parameter",definition:"Lernbarer numerischer Wert eines Modells, der während des Trainings angepasst wird und das Modellverhalten beeinflusst.",category:"Grundlagen",relatedTerms:["Weights","Training"]},
+  {id:156,term:"Hyperparameter",definition:"Von Entwicklern festgelegte Konfiguration eines Trainings- oder Modellierungsverfahrens, die nicht direkt als Modellparameter gelernt wird.",category:"Training",relatedTerms:["Learning Rate","Batch Size"]},
+  {id:157,term:"Weights",definition:"Gelernte Modellparameter, die die Transformation von Eingaben zu Ausgaben bestimmen.",category:"Grundlagen",relatedTerms:["Parameter","Model"]},
+  {id:158,term:"Latent Space",definition:"Interner Repräsentationsraum, in dem ein Modell Daten in kompakter oder semantisch strukturierter Form abbilden kann.",category:"Modelle",relatedTerms:["Embedding","VAE","Diffusion Model"]},
+  {id:159,term:"Model Checkpoint",definition:"Gespeicherter Zustand eines Modells, häufig einschließlich Gewichten und Trainingsinformationen, der später geladen oder weitertrainiert werden kann.",category:"Training",relatedTerms:["Weights","Fine-tuning"]},
+  {id:160,term:"AI API",definition:"Programmierschnittstelle, über die Anwendungen KI-Funktionen wie Chat, Embeddings, Bilder, Audio oder Klassifikation nutzen können.",category:"Infrastruktur",relatedTerms:["API","SDK","Inference Endpoint"]}
 ];
 
 export const getLexiconByCategory = (category: string) => {
@@ -217,9 +176,12 @@ export const getLexiconByCategory = (category: string) => {
 };
 
 export const searchLexicon = (query: string) => {
+  const q = query.trim().toLowerCase();
+  if (!q) return lexiconData;
   return lexiconData.filter(entry =>
-    entry.term.toLowerCase().includes(query.toLowerCase()) ||
-    entry.definition.toLowerCase().includes(query.toLowerCase()) ||
-    entry.relatedTerms.some(term => term.toLowerCase().includes(query.toLowerCase()))
+    entry.term.toLowerCase().includes(q) ||
+    entry.definition.toLowerCase().includes(q) ||
+    entry.relatedTerms.some(term => term.toLowerCase().includes(q)) ||
+    (entry.examples ?? []).some(example => example.toLowerCase().includes(q))
   );
 };
