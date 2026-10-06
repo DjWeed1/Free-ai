@@ -32,6 +32,9 @@ export const translations: Record<LanguageCode, Record<string,string>> = {
  id:{home:'Beranda',prompts:'Prompt',lexicon:'Glosarium',aihub:'AI Hub',images:'Gambar',video:'Video',chat:'Obrolan',phone:'Telepon',website:'Situs web',content:'Konten',login:'Masuk',logout:'Keluar',language:'Bahasa',search:'Cari'},
  ms:{home:'Laman Utama',prompts:'Prompt',lexicon:'Glosari',aihub:'AI Hub',images:'Imej',video:'Video',chat:'Sembang',phone:'Telefon',website:'Laman web',content:'Kandungan',login:'Log masuk',logout:'Log keluar',language:'Bahasa',search:'Cari'}
 };
+export const rtlLanguages: LanguageCode[] = ['ar','he','fa','ur'];
+export function setLanguage(language: LanguageCode): void { localStorage.setItem('free-ai-language', language); document.documentElement.lang=language; document.documentElement.dir=rtlLanguages.includes(language)?'rtl':'ltr'; window.dispatchEvent(new Event('free-ai-language-change')); }
+export function translate(language: LanguageCode, key: string): string { return translations[language]?.[key] ?? translations.en[key] ?? key; }
 export function detectLanguage(): LanguageCode {
  const saved=localStorage.getItem('free-ai-language') as LanguageCode|null;
  if(saved && SUPPORTED_LANGUAGES.some(x=>x[0]===saved)) return saved;
