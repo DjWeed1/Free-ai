@@ -1,83 +1,53 @@
 # Free-AI
 
-Free-AI is an AI knowledge and discovery platform designed to make artificial intelligence easier to understand, explore and use.
+Free-AI ist eine KI-Wissens- und Discovery-Plattform für Begriffe, Tools, Prompts und praktische KI-Workflows.
 
-The project combines an **AI lexicon**, curated **AI tools**, reusable **prompts**, category-based discovery and an integrated assistant experience in one web application.
+## Kernfunktionen
 
-## What Free-AI provides
+### 📚 KI-Lexikon
 
-### 📚 AI Lexicon
+Das Lexikon enthält aktuell **453 strukturierte KI-Begriffe** aus Bereichen wie KI-Grundlagen, Machine Learning, Daten, neuronale Netze, Transformer, LLMs, Foundation Models, generative KI, Audio, Sprache, Computer Vision, Prompt Engineering, Training, Inferenz, RAG, Embeddings, Agenten, Infrastruktur, Sicherheit, Ethik und Governance.
 
-The repository now contains **160+ structured AI terms** covering:
+Ein Eintrag kann Definition, Kategorie, verwandte Begriffe, Beispiele, Review-Status, Quelle und Verifizierungsdatum enthalten.
 
-- AI fundamentals
-- Machine Learning
-- Data and datasets
-- Neural-network architectures
-- LLMs and language models
-- Generative AI
-- Audio and speech AI
-- Computer Vision
-- NLP and language technologies
-- Prompt engineering
-- Model training and fine-tuning
-- Inference and model parameters
-- AI agents and automation
-- APIs and AI infrastructure
-- Security and quality
-- AI ethics and governance
-- Practical AI applications
+Unterstützt werden Volltextsuche, Definitionssuche, Kategoriefilter, Detailansicht und verwandte Konzepte.
 
-Every lexicon entry can contain a definition, related concepts and examples.
+### 🌍 Mehrsprachigkeit
 
-The lexicon supports:
+Free-AI ist für **24 Sprachen** vorbereitet:
 
-- Full-text search
-- Searching definitions
-- Searching related terms
-- Searching examples
-- Category filtering
-- Detailed term view
-- Related-concept navigation
+Deutsch, Englisch, Spanisch, Französisch, Italienisch, Portugiesisch, Niederländisch, Polnisch, Türkisch, Russisch, Ukrainisch, Arabisch, Hebräisch, Persisch, Hindi, Bengalisch, Urdu, Chinesisch, Japanisch, Koreanisch, Vietnamesisch, Thai, Indonesisch und Malaiisch.
 
-### 🧰 AI Tool Directory
+Die Sprache wird zentral verwaltet. Für Arabisch, Hebräisch, Persisch und Urdu wird zusätzlich RTL unterstützt. Browser-Sprachpräferenzen können über navigator.languages berücksichtigt werden; lokalisierte Seitentexte müssen als projektspezifische Übersetzungsdaten gepflegt werden.
 
-Free-AI organizes AI tools into practical categories including:
+Technische Fachbegriffe werden nicht blind Wort für Wort übersetzt. Etablierte Begriffe wie Transformer, Token, RAG, Embedding oder Fine-Tuning bleiben dort erhalten, wo dies fachlich korrekt ist.
 
-- Prompts
-- Image generation and editing
-- Video
-- AI chat
-- Voice and telephone AI
-- Website builders
-- Content creation
-- YouTube tools
+### 🧰 KI-Tool-Verzeichnis
 
-The current interface advertises **85+ AI tools** and is designed to grow as new tools are added.
+Die Tool-Sammlung organisiert KI-Angebote unter anderem nach Prompts, Bildern, Video, Chat, Voice/Telefon, Websites, Content und YouTube.
 
-### ✨ Prompt Library
+Preise, Limits, Free-Tiers und Produktfunktionen können sich ändern und sollten vor einer aktuellen Entscheidung beim Anbieter geprüft werden.
 
-The project contains a dedicated prompt section with curated prompts for different AI workflows, including chat, image generation, coding and writing.
+### 🧪 Prompt Library
 
-### 🤖 AI Assistant
+Wiederverwendbare Prompts für Chat, Bildgenerierung, Coding und Content-Erstellung.
 
-The application includes an integrated chatbot component that can be used as part of the Free-AI experience.
+### 🧠 AI Knowledge & Discovery Hub
 
-### 🔐 User Accounts
+Der AI Hub bündelt:
 
-Firebase is included in the application for authentication and user-related functionality.
+1. Lexicon 2.0 mit 453 Konzepten
+2. Tool Explorer
+3. Intelligent Discovery
+4. Model Comparison
+5. Decision Assistant
+6. Prompt Lab
+7. Learning Paths
+8. Agent Architecture
+9. Local AI
+10. Trust & Quality
 
-The repository contains an authentication context and Firebase initialization/configuration modules.
-
-### 📊 Dashboard
-
-A dashboard component is included for authenticated users and provides a foundation for statistics, activity, settings, billing and notifications.
-
-Some dashboard values are currently demonstration/placeholder data and should not be interpreted as production analytics.
-
-## Technology
-
-The current web application is built with:
+## Technologie
 
 - React 18
 - TypeScript
@@ -87,162 +57,85 @@ The current web application is built with:
 - Lucide React
 - ESLint
 
-## Project Structure
+## Projektstruktur
 
 ```text
 Free-ai/
 ├── src/
 │   ├── components/
-│   │   ├── CategoryView.tsx
-│   │   ├── ChatBot.tsx
-│   │   ├── Dashboard.tsx
-│   │   ├── FeaturesGrid.tsx
-│   │   ├── GlobalSearch.tsx
-│   │   ├── HeroSection.tsx
-│   │   ├── Home.tsx
+│   │   ├── AIHub.tsx
 │   │   ├── Lexicon.tsx
+│   │   ├── LanguageSwitcher.tsx
 │   │   └── ...
 │   ├── context/
-│   │   └── AuthContext.tsx
+│   │   ├── AuthContext.tsx
+│   │   └── LanguageContext.tsx
 │   ├── data/
 │   │   ├── lexiconData.ts
+│   │   ├── extendedLexiconData.ts
 │   │   ├── promptsData.ts
 │   │   └── toolsData.ts
 │   ├── firebase/
-│   │   ├── config.ts
-│   │   └── init.ts
+│   ├── i18n.ts
 │   ├── App.tsx
 │   └── main.tsx
 ├── public/
+├── .github/workflows/
 ├── index.html
 ├── package.json
-├── tailwind.config.js
-├── vite.config.ts
 └── README.md
 ```
 
-## Lexicon Data Model
+## Lokale Entwicklung
 
-Lexicon entries use a simple TypeScript structure:
-
-```ts
-interface LexiconEntry {
-  id: number;
-  term: string;
-  definition: string;
-  category: string;
-  relatedTerms: string[];
-  examples?: string[];
-}
-```
-
-This makes the knowledge base easy to extend without changing the main UI.
-
-## Local Development
-
-### Requirements
-
-- Node.js
-- npm
-
-### Install
+Voraussetzungen: Node.js 20+ und npm.
 
 ```bash
 git clone https://github.com/DjWeed1/Free-ai.git
 cd Free-ai
 npm install
-```
-
-### Start development server
-
-```bash
 npm run dev
 ```
 
-### Build
+Weitere Befehle:
 
 ```bash
 npm run build
-```
-
-### Lint
-
-```bash
 npm run lint
-```
-
-### Preview production build
-
-```bash
 npm run preview
 ```
 
+## Datenqualität
+
+Das Lexikon ist als educational reference gedacht und ersetzt keine offizielle technische Dokumentation.
+
+KI-Terminologie, Modelle und Produkte ändern sich schnell. Besonders Preise, API-Limits, Free-Tiers und Produktfunktionen sollten aktuell beim Anbieter geprüft werden.
+
+Einträge mit Review-Status review sind redaktionelle Entwürfe und sollten vor formaler Veröffentlichung fachlich geprüft werden.
+
 ## Roadmap
 
-- [x] AI lexicon
-- [x] Lexicon search
-- [x] Lexicon categories
-- [x] Related AI concepts
-- [x] AI tool categories
-- [x] Prompt library
-- [x] Global search
-- [x] Firebase authentication foundation
-- [x] Integrated chatbot component
-- [x] User dashboard foundation
-- [ ] Expand the lexicon continuously
-- [ ] Add richer cross-links between related terms
-- [ ] Add source references and verification dates to important definitions
-- [ ] Add favourites/bookmarks
-- [ ] Add user suggestions for new terms
-- [ ] Add multilingual lexicon content
-- [ ] Improve tool metadata and filtering
-- [ ] Replace dashboard placeholder statistics with real analytics
-- [ ] Add stronger automated tests
-- [ ] Improve accessibility and SEO
-- [ ] Continue mobile/Android integration
+- [x] KI-Lexikon mit 453 Begriffen
+- [x] Lexikon-Suche und Kategorien
+- [x] Verwandte Konzepte
+- [x] AI Knowledge & Discovery Hub
+- [x] Mehrsprachige UI-Grundlage für 24 Sprachen
+- [x] RTL-Unterstützung
+- [ ] Vollständige redaktionelle Übersetzung aller 453 Definitionen in alle 24 Sprachen
+- [ ] Mehrsprachige Beispiele und verwandte Begriffe
+- [ ] Quellenprüfung und Verifizierungsworkflow ausbauen
+- [ ] Favoriten und Bookmarks
+- [ ] Nutzer-Vorschläge für neue Begriffe
+- [ ] Stärkere automatisierte Tests
+- [ ] Accessibility und SEO weiter verbessern
+- [ ] Dashboard-Platzhalter durch echte Analytics ersetzen
 
-## Content Quality
+## Mitmachen
 
-AI terminology changes quickly. Definitions in Free-AI should be treated as educational reference material, not as a substitute for official technical documentation.
+Willkommen sind Beiträge zu neuen KI-Begriffen, fachlichen Korrekturen, Beispielen, Tools, Prompts, Übersetzungen, Accessibility, Tests, Bugfixes und Dokumentation.
 
-For rapidly changing products, model names, pricing, API limits and free tiers, always verify the current information with the provider.
+Bei aktuellen Produktinformationen sollten nach Möglichkeit offizielle Quellen verwendet werden.
 
-## Contributing
+## Lizenz
 
-Contributions are welcome.
-
-Useful contributions include:
-
-- New AI terminology
-- Corrections to existing definitions
-- Better examples
-- New AI tools
-- New prompts
-- Improved search and categorization
-- Accessibility improvements
-- Bug fixes
-- Documentation
-
-When adding an important factual claim about a current product or service, prefer an official source.
-
-## License
-
-No explicit project license is currently documented in this repository. Check the repository before redistributing the project or its contents.
-
-
-## AI Knowledge & Discovery Hub
-
-Free-AI now includes an integrated AI Hub that brings the planned advanced layer into one interface:
-
-1. **Lexicon 2.0** — 453 AI concepts with dynamic categories and review metadata.
-2. **Tool Explorer** — searchable tool directory with free/local filters based on the repository's tool metadata.
-3. **Intelligent discovery** — unified search across AI concepts and tool metadata.
-4. **Model comparison** — structured profiles for major model families, including local/API/privacy dimensions.
-5. **Decision assistant** — ranks available tools against a user's stated goal and constraints.
-6. **Prompt Lab** — converts a rough prompt into a structured, reusable prompt template.
-7. **Learning paths** — guided tracks for AI basics, LLM engineering, agents, Local AI and Responsible AI.
-8. **Agent architecture** — visual workflow covering intent, planning, retrieval, tools/MCP and evaluation.
-9. **Local AI** — practical stack overview for GGUF, Ollama, llama.cpp, LM Studio and vLLM.
-10. **Trust & Quality** — explicit review status, verification dates, evaluation concepts and safety principles.
-
-The advanced Hub is intentionally designed as a knowledge/discovery layer first. Live prices, provider limits and third-party availability should be re-verified before being treated as current facts.
+Im Repository ist derzeit keine ausdrückliche Projektlizenz dokumentiert. Vor Weiterverwendung oder Redistribution bitte den aktuellen Repository-Stand prüfen.
