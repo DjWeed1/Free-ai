@@ -8,7 +8,7 @@ The project combines an **AI lexicon**, curated **AI tools**, reusable **prompts
 
 ### 📚 AI Lexicon
 
-The repository now contains **160+ structured AI terms** covering:
+The repository now contains **453+ structured AI terms** covering:
 
 - AI fundamentals
 - Machine Learning
@@ -244,5 +244,27 @@ Free-AI now includes an integrated AI Hub that brings the planned advanced layer
 8. **Agent architecture** — visual workflow covering intent, planning, retrieval, tools/MCP and evaluation.
 9. **Local AI** — practical stack overview for GGUF, Ollama, llama.cpp, LM Studio and vLLM.
 10. **Trust & Quality** — explicit review status, verification dates, evaluation concepts and safety principles.
+
+## Local AI Knowledge Base
+
+Free-AI now contains a dedicated practical knowledge base for **free and local AI**. It is designed to answer questions such as: *How do I get AI for free? Can I run it locally? Which devices are supported? What hardware do I need? Which runtime should I choose? Can I work offline? What about privacy and security?*
+
+The Local AI section covers:
+
+- **Platforms:** Windows, Linux, macOS, Android, iOS/iPadOS and dedicated servers
+- **Runtimes:** Ollama, LM Studio, llama.cpp, vLLM, KoboldCpp and GPT4All
+- **Formats:** GGUF and quantization concepts such as Q4/Q5/Q6/Q8
+- **Interfaces:** Open WebUI and local APIs
+- **Hardware:** CPU, GPU, NPU, RAM, VRAM, storage and model-size trade-offs
+- **Practical installation flow:** goal → hardware → runtime → model → test → security → extensions
+- **Offline operation:** what must be available locally before disconnecting from the internet
+- **Privacy:** what local inference does and does not protect
+- **Server security:** firewall, authentication, least privilege and avoiding unsafe public API exposure
+- **Model selection:** choosing by task, language, context, hardware, speed and license
+- **Operating cost:** electricity and hardware are still costs even when the software/model is free
+
+The knowledge base intentionally avoids the claim that **every AI can run on every device**. Device architecture, memory, acceleration support, model format and model size determine what is practical.
+
+The detailed data is stored in `src/data/localAiData.ts` and is rendered in the AI Hub's **Local AI** section.
 
 The advanced Hub is intentionally designed as a knowledge/discovery layer first. Live prices, provider limits and third-party availability should be re-verified before being treated as current facts.
